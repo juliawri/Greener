@@ -8,8 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     var titleLabel = UILabel()
+    var score1Button1 = UIButton()
+    var score1Button2 = UIButton()
+    var scoreLabel1 = UILabel()
     
     // function to allow hex colours to be used
     func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0)->UIColor {
@@ -41,8 +44,58 @@ class ViewController: UIViewController {
         //making circular
         titleLabel.layer.cornerRadius =  titleLabel.frame.width/2
         titleLabel.layer.masksToBounds = true
+
+        //first score label
+                scoreLabel1.frame = CGRect(x: (self.view.frame.width / 2) - 120, y: 300, width: 125, height: 75)
+                scoreLabel1.text = "recycle 5 times"
+                self.view.addSubview(scoreLabel1)
+                //background color
+                scoreLabel1.backgroundColor = UIColorFromHex(rgbValue: 0x508A43, alpha: 1)
+                //text alignment
+                scoreLabel1.textAlignment = .center
+                //text colour
+                scoreLabel1.textColor = UIColorFromHex(rgbValue: 0xDEE4DD, alpha: 1)
+                //changing font
+                scoreLabel1.font = UIFont(name: "Avenir Next", size: 18)
+                //rounding corners
+                scoreLabel1.layer.cornerRadius =  15
+                scoreLabel1.layer.masksToBounds = true
+
+//first score button with square buttons
+        view.addSubview(score1Button2)
+        //framing
+        score1Button2.frame = CGRect(x: (self.view.frame.width / 2) - 65, y: 300, width: 65, height: 75)
+        //background color
+        score1Button2.backgroundColor = UIColorFromHex(rgbValue: 0x508A43, alpha: 1)
+        //tag is used for differentiating buttons
+        score1Button2.tag = 2
+
+        
+//first score button with rounded corners
+        view.addSubview(score1Button1)
+        //framing
+        score1Button1.frame = CGRect(x: (self.view.frame.width / 2) - 65, y: 300, width: 130, height: 75)
+        //background color
+        score1Button1.backgroundColor = UIColorFromHex(rgbValue: 0xFF0000, alpha: 1)
+        //title
+        score1Button1.setTitle("hi", for: .normal)
+        //making the button clickable
+        score1Button1.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        //rounding corners
+        score1Button1.layer.cornerRadius = 15
+        score1Button1.layer.masksToBounds = true
+        //tag is used for differentiating buttons
+        score1Button1.tag = 1
+
     }
+        
+//function for when first button is tapped
+    @objc func buttonAction(sender: UIButton!) {
+            if sender.tag == 1 {
+
+            }
+        }
 
 
+    
 }
-
