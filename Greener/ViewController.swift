@@ -9,12 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //how many points user has
+    var points = 0
+    
     var titleLabel = UILabel()
     var score1Button1 = UIButton()
     var score1Button2 = UIButton()
     var scoreLabel1 = UILabel()
     
-    // function to allow hex colours to be used
+    //array of images
+    var images = [UIImage(named: "Circle_1")!, UIImage(named: "Circle_2")!]
+    
+    // function to allow hex codes to be used
     func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0)->UIColor {
         let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
         let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
@@ -95,7 +101,8 @@ class ViewController: UIViewController {
                 print("button pressed")
             }
         }
-
+    
+func pointIncrease(
 
     
 }
