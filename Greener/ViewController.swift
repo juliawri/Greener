@@ -40,6 +40,70 @@ class ViewController: UIViewController {
            return theImageView1
         }()
     
+    //declaring red flower image
+    var imageView2: UIImageView = {
+           let theImageView1 = UIImageView()
+           theImageView1.image = UIImage(named: "redflower")
+           return theImageView1
+        }()
+    
+    //declaring orange flower image
+    var imageView3: UIImageView = {
+           let theImageView1 = UIImageView()
+           theImageView1.image = UIImage(named: "orangeflower")
+           return theImageView1
+        }()
+    
+    //declaring bee image
+    var imageView4: UIImageView = {
+           let theImageView1 = UIImageView()
+           theImageView1.image = UIImage(named: "bee")
+           return theImageView1
+        }()
+    
+    //declaring beetle image
+    var imageView5: UIImageView = {
+           let theImageView1 = UIImageView()
+           theImageView1.image = UIImage(named: "beetle")
+           return theImageView1
+        }()
+    
+    //declaring snail image
+    var imageView6: UIImageView = {
+           let theImageView1 = UIImageView()
+           theImageView1.image = UIImage(named: "snail")
+           return theImageView1
+        }()
+    
+    //declaring slug image
+    var imageView7: UIImageView = {
+           let theImageView1 = UIImageView()
+           theImageView1.image = UIImage(named: "slug")
+           return theImageView1
+        }()
+    
+    //declaring ant image
+    var imageView8: UIImageView = {
+           let theImageView1 = UIImageView()
+           theImageView1.image = UIImage(named: "ant")
+           return theImageView1
+        }()
+    
+    //declaring ladybug image
+    var imageView9: UIImageView = {
+           let theImageView1 = UIImageView()
+           theImageView1.image = UIImage(named: "ladybug")
+           return theImageView1
+        }()
+    
+    //declaring caterpillar image
+    var imageView10: UIImageView = {
+           let theImageView1 = UIImageView()
+           theImageView1.image = UIImage(named: "caterpillar")
+           return theImageView1
+        }()
+    
+    
     //array of images
     var images = [UIImage(named: "Circle_1")!, UIImage(named: "Circle_2")!]
     
@@ -56,11 +120,55 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//purple flower image
-        view.addSubview(imageView1)
-        imageView1.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-        imageView1.isHidden = true
-
+        //purple flower image
+                view.addSubview(imageView1)
+                imageView1.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+                imageView1.isHidden = true
+    
+        //redflower image
+                view.addSubview(imageView2)
+                imageView2.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+                imageView2.isHidden = true
+        
+        //orange flower image
+                view.addSubview(imageView3)
+                imageView3.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+                imageView3.isHidden = true
+        
+        //bee image
+                view.addSubview(imageView4)
+                imageView4.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+                imageView4.isHidden = true
+        
+        //beetle image
+                view.addSubview(imageView5)
+                imageView5.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+                imageView5.isHidden = true
+        
+        //snail image
+                view.addSubview(imageView6)
+                imageView6.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+                imageView6.isHidden = true
+        
+        //slug image
+                view.addSubview(imageView7)
+                imageView7.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+                imageView7.isHidden = true
+        
+        //ant image
+                view.addSubview(imageView8)
+                imageView8.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+                imageView8.isHidden = true
+        
+        //ladybug image
+                view.addSubview(imageView9)
+                imageView9.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+                imageView9.isHidden = true
+        
+        //caterpillar image
+                view.addSubview(imageView10)
+                imageView10.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+                imageView10.isHidden = true
         
 // circular title label at top of page
         titleLabel.frame = CGRect(x: (self.view.frame.width / 2) - 100, y: 150, width: 200, height: 200)
@@ -186,10 +294,35 @@ class ViewController: UIViewController {
             if points >= 10 {
                 imageView1.isHidden = false
             }
-        
+            if points >= 15 {
+                imageView2.isHidden = false
+            }
+            if points >= 20 {
+                imageView3.isHidden = false
+            }
+            if points >= 25 {
+                imageView4.isHidden = false
+            }
+            if points >= 30 {
+                imageView5.isHidden = false
+            }
+            if points >= 35 {
+                imageView6.isHidden = false
+            }
+            if points >= 40 {
+                imageView7.isHidden = false
+            }
+            if points >= 45 {
+                imageView8.isHidden = false
+            }
+            if points >= 35 {
+                imageView9.isHidden = false
+            }
+            if points >= 40 {
+                imageView10.isHidden = false
     
         }
-    
+    }
 
     
 }
