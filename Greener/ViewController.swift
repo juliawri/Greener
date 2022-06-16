@@ -102,7 +102,6 @@ class ViewController: UIViewController {
             }
         }
     
-func pointIncrease(
 
     
 }

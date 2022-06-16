@@ -8,11 +8,9 @@
 import UIKit
 
 class firstViewController: UIViewController {
-
-    @IBOutlet weak var randomLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        randomlabel.text = "hjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxvhjabghjsxv"
+       
 
         // Do any additional setup after loading the view.
     }
