@@ -12,6 +12,17 @@ class ViewController: UIViewController {
     //how many points user has
     var points = 0
     
+    // we have to grab this view context to be able to work with Core Data
+      /*if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+
+        // we are creating a new ToDoCD object here, naming it toDo
+         points = PointsCD(entity: PointsCD.entity(), insertInto: context)
+
+        try? context.save()
+
+        navigationController?.popViewController(animated: true)
+      } */
+          
     var titleLabel = UILabel()
     var score1Button1 = UIButton()
     var score1Button2 = UIButton()
@@ -20,6 +31,14 @@ class ViewController: UIViewController {
     var score2Button1 = UIButton()
     var score2Button2 = UIButton()
     var scoreLabel2 = UILabel()
+    
+    
+    //declaring purple flower image
+    var imageView1: UIImageView = {
+           let theImageView1 = UIImageView()
+           theImageView1.image = UIImage(named: "purpleflower")
+           return theImageView1
+        }()
     
     //array of images
     var images = [UIImage(named: "Circle_1")!, UIImage(named: "Circle_2")!]
@@ -37,6 +56,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//purple flower image
+        view.addSubview(imageView1)
+        imageView1.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+        imageView1.isHidden = true
+
+        
 // circular title label at top of page
         titleLabel.frame = CGRect(x: (self.view.frame.width / 2) - 100, y: 150, width: 200, height: 200)
         titleLabel.text = "\(points)\n Points"
@@ -140,7 +165,6 @@ class ViewController: UIViewController {
         score2Button1.layer.masksToBounds = true
         //tag is used for differentiating buttons
         score2Button1.tag = 2
-
     }
         
 //function for when first button is tapped
@@ -158,6 +182,12 @@ class ViewController: UIViewController {
             points = points + 10
             titleLabel.text = "\(points)\n Points"
             }
+        
+            if points >= 10 {
+                imageView1.isHidden = false
+            }
+        
+    
         }
     
 
