@@ -6,22 +6,22 @@
 //
 
 import UIKit
-
+import SwiftUI
+import CoreData
 class ViewController: UIViewController {
     
+    var newPoints = Points()
     //how many points user has
-    var points = 0
-    
-    // we have to grab this view context to be able to work with Core Data
-      /*if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+     var pointsTemp = Int(0)
+    /* func getPoints() {
+      if var context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
 
-        // we are creating a new ToDoCD object here, naming it toDo
-         points = PointsCD(entity: PointsCD.entity(), insertInto: context)
+        if var coreDataPoints = try? context.fetch(PointsCD.fetchRequest()) as? [PointsCD] {
+            pointsTemp = Int(coreDataPoints)
+        }
+      }
+    } */
 
-        try? context.save()
-
-        navigationController?.popViewController(animated: true)
-      } */
           
     var titleLabel = UILabel()
     var score1Button1 = UIButton()
@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     var score2Button1 = UIButton()
     var score2Button2 = UIButton()
     var scoreLabel2 = UILabel()
+    
     
     
     //declaring purple flower image
@@ -61,10 +62,10 @@ class ViewController: UIViewController {
            return theImageView1
         }()
     
-    //declaring beetle image
+    //declaring caterpillar image
     var imageView5: UIImageView = {
            let theImageView1 = UIImageView()
-           theImageView1.image = UIImage(named: "beetle")
+           theImageView1.image = UIImage(named: "caterpillar")
            return theImageView1
         }()
     
@@ -96,10 +97,10 @@ class ViewController: UIViewController {
            return theImageView1
         }()
     
-    //declaring caterpillar image
+    //declaring beetle image
     var imageView10: UIImageView = {
            let theImageView1 = UIImageView()
-           theImageView1.image = UIImage(named: "caterpillar")
+           theImageView1.image = UIImage(named: "beetle")
            return theImageView1
         }()
     
@@ -120,59 +121,63 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //purple flower image
-                view.addSubview(imageView1)
-                imageView1.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-                imageView1.isHidden = true
+//purple flower image
+        view.addSubview(imageView1)
+        imageView1.frame = CGRect(x: (self.view.frame.width / 2) + 40, y: 700, width: 160, height: 200)
+        imageView1.isHidden = true
     
-        //redflower image
-                view.addSubview(imageView2)
-                imageView2.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-                imageView2.isHidden = true
+//redflower image
+        view.addSubview(imageView2)
+        imageView2.frame = CGRect(x: (self.view.frame.width / 2) - 233, y: 700, width: 160, height: 200)
+        imageView2.isHidden = true
+
+//orange flower image
+        view.addSubview(imageView3)
+        imageView3.frame = CGRect(x: (self.view.frame.width / 2) + 10, y: 0, width: 200, height: 160)
+        imageView3.isHidden = true
+
+//bee image
+        view.addSubview(imageView4)
+        imageView4.frame = CGRect(x: (self.view.frame.width / 2) - 200, y: 325, width: 160, height: 160)
+        imageView4.isHidden = true
+
+//caterpillar image
+        imageView5.transform = imageView5.transform.rotated(by: .pi * 1.5)
+        view.addSubview(imageView5)
+        imageView5.frame = CGRect(x: (self.view.frame.width / 2) + 112, y: 400, width: 160, height: 200)
+        imageView5.isHidden = true
         
-        //orange flower image
-                view.addSubview(imageView3)
-                imageView3.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-                imageView3.isHidden = true
-        
-        //bee image
-                view.addSubview(imageView4)
-                imageView4.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-                imageView4.isHidden = true
-        
-        //beetle image
-                view.addSubview(imageView5)
-                imageView5.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-                imageView5.isHidden = true
-        
-        //snail image
-                view.addSubview(imageView6)
-                imageView6.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-                imageView6.isHidden = true
-        
-        //slug image
-                view.addSubview(imageView7)
-                imageView7.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-                imageView7.isHidden = true
-        
-        //ant image
-                view.addSubview(imageView8)
-                imageView8.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-                imageView8.isHidden = true
-        
-        //ladybug image
-                view.addSubview(imageView9)
-                imageView9.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-                imageView9.isHidden = true
-        
-        //caterpillar image
-                view.addSubview(imageView10)
-                imageView10.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-                imageView10.isHidden = true
+
+//snail image
+        view.addSubview(imageView6)
+        imageView6.transform = imageView5.transform.rotated(by: .pi * 1.95)
+        imageView6.frame = CGRect(x: (self.view.frame.width / 2) + 109 , y: 150, width: 160, height: 145)
+        imageView6.isHidden = true
+
+//slug image
+        view.addSubview(imageView7)
+        imageView7.transform = imageView7.transform.rotated(by: .pi + 1.5)
+        imageView7.frame = CGRect(x: (self.view.frame.width / 2) - 165, y: 150, width: 160, height: 160)
+        imageView7.isHidden = true
+
+//ant image
+        view.addSubview(imageView8)
+        imageView8.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+        imageView8.isHidden = true
+
+//ladybug image
+        view.addSubview(imageView9)
+        imageView9.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+        imageView9.isHidden = true
+
+//beetle image
+        view.addSubview(imageView10)
+        imageView10.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+        imageView10.isHidden = true
         
 // circular title label at top of page
         titleLabel.frame = CGRect(x: (self.view.frame.width / 2) - 100, y: 150, width: 200, height: 200)
-        titleLabel.text = "\(points)\n Points"
+        titleLabel.text = "\(pointsTemp)\n Points"
         self.view.addSubview(titleLabel)
         // number of lines
         titleLabel.numberOfLines = 2
@@ -280,47 +285,63 @@ class ViewController: UIViewController {
             if sender.tag == 1 {
                 score1Button1.backgroundColor = UIColorFromHex(rgbValue: 0xDCECB0)
                 score1Button2.backgroundColor = UIColorFromHex(rgbValue: 0xDCECB0)
-            points = points + 5
-            titleLabel.text = "\(points)\n Points"
+            pointsTemp = pointsTemp + 5
+            titleLabel.text = "\(pointsTemp)\n Points"
                 
             }
             if sender.tag == 2 {
                 score2Button1.backgroundColor = UIColorFromHex(rgbValue: 0xDCECB0)
                 score2Button2.backgroundColor = UIColorFromHex(rgbValue: 0xDCECB0)
-            points = points + 10
-            titleLabel.text = "\(points)\n Points"
+            pointsTemp = pointsTemp + 10
+            titleLabel.text = "\(pointsTemp)\n Points"
             }
         
-            if points >= 10 {
+            if pointsTemp >= 10 {
                 imageView1.isHidden = false
             }
-            if points >= 15 {
+            if pointsTemp >= 15 {
                 imageView2.isHidden = false
             }
-            if points >= 20 {
+            if pointsTemp >= 20 {
                 imageView3.isHidden = false
             }
-            if points >= 25 {
+            if pointsTemp >= 25 {
                 imageView4.isHidden = false
             }
-            if points >= 30 {
+            if pointsTemp >= 30 {
                 imageView5.isHidden = false
             }
-            if points >= 35 {
+            if pointsTemp >= 35 {
                 imageView6.isHidden = false
             }
-            if points >= 40 {
+            if pointsTemp >= 40 {
                 imageView7.isHidden = false
             }
-            if points >= 45 {
+            if pointsTemp >= 45 {
                 imageView8.isHidden = false
             }
-            if points >= 35 {
+            if pointsTemp >= 50 {
                 imageView9.isHidden = false
             }
-            if points >= 40 {
+            if pointsTemp >= 55 {
                 imageView10.isHidden = false
     
+        }
+        
+        // we have to grab this view context to be able to work with Core Data
+        if var context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+
+          // we are creating a new ToDoCD object here, naming it toDo
+          var pointsInt = PointsCD(entity: PointsCD.entity(), insertInto: context)
+
+          // if the titleTextField has text, we will call that text titleText
+            
+            pointsInt.points = Int32(pointsTemp)
+ 
+
+          try? context.save()
+
+          navigationController?.popViewController(animated: true)
         }
     }
 
