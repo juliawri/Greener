@@ -22,6 +22,7 @@
                     <connections>
                         <segue destination="JXY-WQ-edC" kind="showDetail" identifier="instrucSegue" id="q08-Cs-uJH"/>
                         <segue destination="p4N-Ck-lSC" kind="show" identifier="recyclingSegue" id="t76-2K-Bvo"/>
+                        <segue destination="xAd-bL-KZC" kind="show" identifier="moreTasksSegue" id="5US-PP-VYE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -33,17 +34,26 @@
             <objects>
                 <viewController id="JXY-WQ-edC" customClass="firstViewController" customModule="Greener" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eEw-7l-nd7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1146"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1038"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-4J-fmS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="1146"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1038"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74P-sU-4Wi">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4O3-Ah-mWr">
                                                 <rect key="frame" x="20" y="8" width="374" height="150"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drZ-ak-SIX">
+                                                        <rect key="frame" x="114" y="29" width="42" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="aCF-jE-fMe"/>
                                                 </constraints>
@@ -55,15 +65,21 @@
                                                     <constraint firstAttribute="height" constant="150" id="qD0-2R-31r"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1S-9B-bi0">
-                                                <rect key="frame" x="292" y="889" width="67" height="31"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Our goal is to break down our environmental crisis into tangible actions individuals can take to make a difference." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rT6-6b-2b5">
+                                                <rect key="frame" x="50" y="73" width="314" height="312"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                                <connections>
-                                                    <segue destination="waE-rw-a79" kind="show" id="CvB-Uq-YhW"/>
-                                                </connections>
-                                            </button>
+                                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6P7-ud-RLP">
+                                                <rect key="frame" x="70" y="380" width="275" height="440"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">As you choose to live an eco-friendly lifestyle make sure to update your progress through our app. The more tasks accomplished will lead to a higher score, more life on your homepage, and a better environment. Click through our app to become more motivated to be sustainable!</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.30591398479999998" green="0.54252523180000001" blue="0.26726660130000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -100,18 +116,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uJu-43-pV9"/>
-                    <size key="freeformSize" width="414" height="1200"/>
+                    <size key="freeformSize" width="414" height="1092"/>
+                    <connections>
+                        <outlet property="descLabel" destination="rT6-6b-2b5" id="wGw-bq-HHt"/>
+                        <outlet property="titleLabel" destination="drZ-ak-SIX" id="01c-ai-5gd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awf-BK-2DT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3720.289855072464" y="69.642857142857139"/>
+            <point key="canvasLocation" x="3720.289855072464" y="141.96428571428569"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cEn-1l-7xF">
             <objects>
                 <viewController id="waE-rw-a79" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wzm-Bj-FBi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="AJM-wc-KbA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -137,6 +157,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEM-rs-R2I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2204" y="-612"/>
+        </scene>
+        <!--More Tasks View Controller-->
+        <scene sceneID="GKY-l6-xWo">
+            <objects>
+                <viewController id="xAd-bL-KZC" customClass="MoreTasksViewController" customModule="Greener" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H1R-p6-dB0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SQ0-V7-f5e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="A3q-OP-hzv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqI-EX-2yN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2887" y="-611"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bYi-Qh-42G">

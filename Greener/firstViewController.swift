@@ -9,11 +9,35 @@ import UIKit
 import SwiftUI
 class firstViewController: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var descLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+// function to allow hex codes to be used
+    func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0)->UIColor {
+        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+        let blue = CGFloat(rgbValue & 0xFF)/256.0
 
+        return UIColor(red:red, green:green, blue:blue, alpha:CGFloat(alpha))
+    }
+       override func viewDidLoad() {
+        super.viewDidLoad()
+//"Instructions" label
+        titleLabel.font = UIFont(name: "Avenir Next", size: 34)
+        titleLabel.frame = CGRect(x: (self.view.frame.width / 2) - 150, y: 20, width: 300, height: 75)
+        titleLabel.text = "Instructions:"
+        self.view.addSubview(titleLabel)
+        //text alignment
+        titleLabel.textAlignment = .center
+        //text colour
+        titleLabel.textColor = UIColorFromHex(rgbValue: 0xFFFFFF, alpha: 1)
+        titleLabel.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
+           titleLabel.layer.cornerRadius = 15
+           titleLabel.layer.masksToBounds = true
+
+
+        
     }
         
 

@@ -10,17 +10,27 @@ import SwiftUI
 import CoreData
 class ViewController: UIViewController {
     
-    var newPoints = Points()
+   var points1 = Points()
+    //var newPoints : [PointsCD] = []
     //how many points user has
-     var pointsTemp = Int(0)
-    /* func getPoints() {
+     var pointsTemp2 = "0"
+    /* func getPoints() -> [PointsCD] {
       if var context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
 
         if var coreDataPoints = try? context.fetch(PointsCD.fetchRequest()) as? [PointsCD] {
-            pointsTemp = Int(coreDataPoints)
+            newPoints = coreDataPoints
         }
       }
+         return newPoints
+    }
+    
+    func unwrap() {
+        var pointsTemp2 = getPoints().joined(separator: "")
     } */
+
+    // declaring "Greener" label
+    var greenerLabel = UILabel()
+    
 
    //declaring points labels
     var titleLabel = UILabel()
@@ -125,6 +135,8 @@ class ViewController: UIViewController {
     
     
     //array of images
+   
+    
     var images = [UIImage(named: "Circle_1")!, UIImage(named: "Circle_2")!]
     
     // function to allow hex codes to be used
@@ -139,6 +151,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
 //purple flower image
         view.addSubview(imageView1)
@@ -193,10 +206,27 @@ class ViewController: UIViewController {
         view.addSubview(imageView10)
         imageView10.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
         imageView10.isHidden = true
+   
+//"Greener" Label
+        greenerLabel.frame = CGRect(x: (self.view.frame.width / 2) - 150, y: 60, width: 300, height: 87.5)
+        greenerLabel.text = "Greener"
+        self.view.addSubview(greenerLabel)
+        //text alignment
+        greenerLabel.textAlignment = .center
+        //text colour
+        greenerLabel.textColor = UIColorFromHex(rgbValue: 0xFFFFFF, alpha: 1)
+        //changing font
+        greenerLabel.font = UIFont(name: "Avenir Next", size: 60)
+        //background colour
+        greenerLabel.backgroundColor = UIColorFromHex(rgbValue: 0x508A43, alpha: 1)
+        //rounding corners
+        //making circular
+        greenerLabel.layer.cornerRadius =  5
+        greenerLabel.layer.masksToBounds = true
         
 // circular title label at top of page
-        titleLabel.frame = CGRect(x: (self.view.frame.width / 2) - 100, y: 150, width: 200, height: 200)
-        titleLabel.text = "\(pointsTemp)\n Points"
+        titleLabel.frame = CGRect(x: (self.view.frame.width / 2) - 100, y: 162.5, width: 200, height: 200)
+        titleLabel.text = "\(points1.number)\n Points"
         self.view.addSubview(titleLabel)
         // number of lines
         titleLabel.numberOfLines = 2
@@ -248,7 +278,7 @@ class ViewController: UIViewController {
         //framing
         score1Button2.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 400, width: 25, height: 75)
         //background color
-        score1Button2.backgroundColor = UIColorFromHex(rgbValue: 0x4E8D7E, alpha: 1)
+        score1Button2.backgroundColor = UIColorFromHex(rgbValue: 0x749668, alpha: 1)
         //tag is used for differentiating buttons
         score1Button2.tag = 1
 
@@ -257,7 +287,7 @@ class ViewController: UIViewController {
         //framing
         score1Button1.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 400, width: 50, height: 75)
         //background color
-        score1Button1.backgroundColor = UIColorFromHex(rgbValue: 0x4E8D7E, alpha: 1)
+        score1Button1.backgroundColor = UIColorFromHex(rgbValue: 0x749668, alpha: 1)
         //title
         score1Button1.setTitle("+", for: .normal)
         //making the button clickable
@@ -294,7 +324,7 @@ class ViewController: UIViewController {
         //framing
         score2Button2.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 500, width: 25, height: 75)
         //background color
-        score2Button2.backgroundColor = UIColorFromHex(rgbValue: 0x4E8D7E, alpha: 1)
+        score2Button2.backgroundColor = UIColorFromHex(rgbValue: 0x749668, alpha: 1)
         //tag is used for differentiating buttons
         score2Button2.tag = 2
 
@@ -303,7 +333,7 @@ class ViewController: UIViewController {
         //framing
         score2Button1.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 500, width: 50, height: 75)
         //background color
-        score2Button1.backgroundColor = UIColorFromHex(rgbValue: 0x4E8D7E, alpha: 1)
+        score2Button1.backgroundColor = UIColorFromHex(rgbValue: 0x749668, alpha: 1)
         //title
         score2Button1.setTitle("+", for: .normal)
         //making the button clickable
@@ -341,7 +371,7 @@ class ViewController: UIViewController {
         //framing
         score3Button2.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 600, width: 25, height: 75)
         //background color
-        score3Button2.backgroundColor = UIColorFromHex(rgbValue: 0x4E8D7E, alpha: 1)
+        score3Button2.backgroundColor = UIColorFromHex(rgbValue: 0x749668, alpha: 1)
         //tag is used for differentiating buttons
         score3Button2.tag = 3
 
@@ -350,7 +380,7 @@ class ViewController: UIViewController {
         //framing
         score3Button1.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 600, width: 50, height: 75)
         //background color
-        score3Button1.backgroundColor = UIColorFromHex(rgbValue: 0x4E8D7E, alpha: 1)
+        score3Button1.backgroundColor = UIColorFromHex(rgbValue: 0x749668, alpha: 1)
         //title
         score3Button1.setTitle("+", for: .normal)
         //making the button clickable
@@ -409,47 +439,49 @@ class ViewController: UIViewController {
         //tags for differentiating buttons
         instrucButton.tag = 7
     }
-        
+   
+    
 //function for when first button is tapped
     @objc func buttonAction(sender: UIButton!) {
             if sender.tag == 1 {
-                score1Button1.backgroundColor = UIColorFromHex(rgbValue: 0xDCECB0)
-                score1Button2.backgroundColor = UIColorFromHex(rgbValue: 0xDCECB0)
-            pointsTemp = pointsTemp + 5
-            titleLabel.text = "\(pointsTemp)\n Points"
+                score1Button1.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
+                score1Button2.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
+                points1.number = points1.number + 5
+            titleLabel.text = "\(points1.number)\n Points"
+                
                 
             }
             if sender.tag == 2 {
-                score2Button1.backgroundColor = UIColorFromHex(rgbValue: 0xDCECB0)
-                score2Button2.backgroundColor = UIColorFromHex(rgbValue: 0xDCECB0)
-            pointsTemp = pointsTemp + 10
-            titleLabel.text = "\(pointsTemp)\n Points"
+                score2Button1.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
+                score2Button2.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
+            points1.number = points1.number + 10
+            titleLabel.text = "\(points1.number)\n Points"
             }
             if sender.tag == 3 {
-                score3Button1.backgroundColor = UIColorFromHex(rgbValue: 0xDCECB0)
-                score3Button2.backgroundColor = UIColorFromHex(rgbValue: 0xDCECB0)
-                pointsTemp = pointsTemp + 15
-                titleLabel.text = "\(pointsTemp)\n Points"
+                score3Button1.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
+                score3Button2.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
+                points1.number = points1.number + 15
+                titleLabel.text = "\(points1.number)\n Points"
             }
-        if pointsTemp >= 10 {
+        if points1.number >= 20 {
             imageView1.isHidden = false
         }
-        if pointsTemp >= 15 {
+        if points1.number >= 40 {
             imageView2.isHidden = false
         }
-        if pointsTemp >= 20 {
+        if points1.number >= 60 {
             imageView3.isHidden = false
         }
-        if pointsTemp >= 25 {
+        if points1.number >= 80 {
             imageView4.isHidden = false
         }
-        if pointsTemp >= 30 {
+        if points1.number >= 100 {
             imageView5.isHidden = false
         }
-        if pointsTemp >= 35 {
+        if points1.number >= 120 {
             imageView6.isHidden = false
         }
-        if pointsTemp >= 40 {
+        if points1.number >= 140 {
             imageView7.isHidden = false
         }
         /* if pointsTemp >= 45 {
@@ -465,20 +497,20 @@ class ViewController: UIViewController {
         
         
         // we have to grab this view context to be able to work with Core Data
-        if var context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+      /* if var context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
 
           // we are creating a new ToDoCD object here, naming it toDo
           var pointsInt = PointsCD(entity: PointsCD.entity(), insertInto: context)
 
           // if the titleTextField has text, we will call that text titleText
             
-            pointsInt.points = Int32(pointsTemp)
+           pointsInt.points = Int32(pointsTemp2)
  
 
           try? context.save()
 
           navigationController?.popViewController(animated: true)
-        }
+        } */
         
         if sender.tag == 11 {
             performSegue(withIdentifier: "recyclingSegue", sender: self)
@@ -486,6 +518,10 @@ class ViewController: UIViewController {
         
         if sender.tag == 7 {
             performSegue(withIdentifier: "instrucSegue", sender: self)
+        }
+        
+        if sender.tag == 5 {
+            performSegue(withIdentifier: "moreTasksSegue", sender: self)
         }
     }
 
