@@ -22,17 +22,36 @@ class ViewController: UIViewController {
       }
     } */
 
-          
+   //declaring points labels
     var titleLabel = UILabel()
+    
+    //declaring "Suggested Actions" label
+    var suggLabel = UILabel()
+    
+    
+    //declaring first points buttons
+    var score1Button3 = UIButton()
     var score1Button1 = UIButton()
     var score1Button2 = UIButton()
-    var scoreLabel1 = UILabel()
     
+    //declaring second points buttons
     var score2Button1 = UIButton()
     var score2Button2 = UIButton()
-    var scoreLabel2 = UILabel()
+    var score2Button3 = UIButton()
     
+    //declaring third points button
+    var score3Button1 = UIButton()
+    var score3Button2 = UIButton()
+    var score3Button3 = UIButton()
     
+    //declaring "Other Ways to Get Points:" label
+    var moreOptionsLabel = UILabel()
+    
+    //declaring "More Tasks" Button
+    var moreOptionsButton = UIButton()
+    
+    //declaring "Instructions" button
+    var instrucButton = UIButton()
     
     //declaring purple flower image
     var imageView1: UIImageView = {
@@ -138,7 +157,7 @@ class ViewController: UIViewController {
 
 //bee image
         view.addSubview(imageView4)
-        imageView4.frame = CGRect(x: (self.view.frame.width / 2) - 200, y: 325, width: 160, height: 160)
+        imageView4.frame = CGRect(x: (self.view.frame.width / 2) - 200, y: 425, width: 160, height: 160)
         imageView4.isHidden = true
 
 //caterpillar image
@@ -188,29 +207,43 @@ class ViewController: UIViewController {
         //text colour
         titleLabel.textColor = UIColorFromHex(rgbValue: 0xDEE4DD, alpha: 1)
         //changing font
-        titleLabel.font = UIFont(name: "Avenir Next", size: 18)
+        titleLabel.font = UIFont(name: "Avenir Next", size: 22)
         //making circular
         titleLabel.layer.cornerRadius =  titleLabel.frame.width/2
         titleLabel.layer.masksToBounds = true
 
-//first score label
-        scoreLabel1.frame = CGRect(x: (self.view.frame.width / 2) - 117.5, y: 400, width: 200, height: 75)
-        scoreLabel1.text = "recycle 5 times"
-        self.view.addSubview(scoreLabel1)
-        //background color
-        scoreLabel1.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
+// "Suggested Tasks" Label
+        suggLabel.frame = CGRect(x: (self.view.frame.width / 2) - 200, y: 342, width: 200, height: 75)
+        suggLabel.text = "Suggested Tasks:"
+        self.view.addSubview(suggLabel)
         //text alignment
-        scoreLabel1.textAlignment = .center
+        suggLabel.textAlignment = .center
         //text colour
-        scoreLabel1.textColor = UIColorFromHex(rgbValue: 0xDDE4DD, alpha: 1)
+        suggLabel.textColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
         //changing font
-        scoreLabel1.font = UIFont(name: "Avenir Next", size: 18)
-        //rounding corners
-        scoreLabel1.layer.cornerRadius =  15
-        scoreLabel1.layer.masksToBounds = true
+        suggLabel.font = UIFont(name: "Avenir Next", size: 18)
+        suggLabel.font = suggLabel.font.italic
 
         
-//first score button with square corners
+//first score left button
+        score1Button3.frame = CGRect(x: (self.view.frame.width / 2) - 117.5, y: 400, width: 200, height: 75)
+        score1Button3.setTitle("Recycle 5 Items", for: .normal)
+        view.addSubview(score1Button3)
+        //background color
+        score1Button3.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
+        //text colour
+        score1Button3.setTitleColor(UIColorFromHex(rgbValue: 0xDDE4DD, alpha: 1), for: .normal)
+        //changing font
+        score1Button3.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        //rounding corners
+        score1Button3.layer.cornerRadius =  15
+        score1Button3.layer.masksToBounds = true
+        //making button clickable
+        score1Button3.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        //tags for differentiating buttons
+        score1Button3.tag = 11
+        
+//first score right button with square corners
         view.addSubview(score1Button2)
         //framing
         score1Button2.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 400, width: 25, height: 75)
@@ -219,7 +252,7 @@ class ViewController: UIViewController {
         //tag is used for differentiating buttons
         score1Button2.tag = 1
 
-//first score button with rounded corners
+//first score right button with rounded corners
         view.addSubview(score1Button1)
         //framing
         score1Button1.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 400, width: 50, height: 75)
@@ -235,26 +268,28 @@ class ViewController: UIViewController {
         //tag is used for differentiating buttons
         score1Button1.tag = 1
 
-        
-        
-//second score label
-        scoreLabel2.frame = CGRect(x: (self.view.frame.width / 2) - 117.5, y: 500, width: 200, height: 75)
-        scoreLabel2.text = "recycle 5 times"
-                self.view.addSubview(scoreLabel2)
+//second score left button
+        score2Button3.frame = CGRect(x: (self.view.frame.width / 2) - 117.5, y: 500, width: 200, height: 75)
+        score2Button3.setTitle("Bring Your Own\n  Grocery Bags", for: .normal)
+        view.addSubview(score2Button3)
         //background color
-        scoreLabel2.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
-        //text alignment
-        scoreLabel2.textAlignment = .center
+        score2Button3.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
         //text colour
-        scoreLabel2.textColor = UIColorFromHex(rgbValue: 0xDDE4DD, alpha: 1)
+        score2Button3.setTitleColor(UIColorFromHex(rgbValue: 0xDDE4DD, alpha: 1), for: .normal)
         //changing font
-        scoreLabel2.font = UIFont(name: "Avenir Next", size: 18)
+        score2Button3.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
         //rounding corners
-        scoreLabel2.layer.cornerRadius =  15
-        scoreLabel2.layer.masksToBounds = true
+        score2Button3.layer.cornerRadius =  15
+        score2Button3.layer.masksToBounds = true
+        //making button clickable
+        score2Button3.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        //multiple lines
+        score2Button3.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
+        //tags for differentiating buttons
+        score2Button3.tag = 12
 
                 
-//second score button with square corners
+//second score right button with square corners
         view.addSubview(score2Button2)
         //framing
         score2Button2.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 500, width: 25, height: 75)
@@ -263,7 +298,7 @@ class ViewController: UIViewController {
         //tag is used for differentiating buttons
         score2Button2.tag = 2
 
-//second score button with rounded corners
+//second score right button with rounded corners
         view.addSubview(score2Button1)
         //framing
         score2Button1.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 500, width: 50, height: 75)
@@ -278,6 +313,101 @@ class ViewController: UIViewController {
         score2Button1.layer.masksToBounds = true
         //tag is used for differentiating buttons
         score2Button1.tag = 2
+
+//third score left button
+        score3Button3.frame = CGRect(x: (self.view.frame.width / 2) - 117.5, y: 600, width: 200, height: 75)
+        score3Button3.setTitle("Grow an Indoor\n         Plant", for: .normal)
+        view.addSubview(score3Button3)
+        //background color
+        score3Button3.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
+        //text colour
+        score3Button3.setTitleColor(UIColorFromHex(rgbValue: 0xDDE4DD, alpha: 1), for: .normal)
+        //changing font
+        score3Button3.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        //rounding corners
+        score3Button3.layer.cornerRadius =  15
+        score3Button3.layer.masksToBounds = true
+        //making button clickable
+        score3Button3.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        //tags for differentiating buttons
+        score3Button3.tag = 13
+        //multiple lines
+        //multiple lines
+        score3Button3.titleLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;
+
+                
+//third score right button with square corners
+        view.addSubview(score3Button2)
+        //framing
+        score3Button2.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 600, width: 25, height: 75)
+        //background color
+        score3Button2.backgroundColor = UIColorFromHex(rgbValue: 0x4E8D7E, alpha: 1)
+        //tag is used for differentiating buttons
+        score3Button2.tag = 3
+
+//third score right button with rounded corners
+        view.addSubview(score3Button1)
+        //framing
+        score3Button1.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 600, width: 50, height: 75)
+        //background color
+        score3Button1.backgroundColor = UIColorFromHex(rgbValue: 0x4E8D7E, alpha: 1)
+        //title
+        score3Button1.setTitle("+", for: .normal)
+        //making the button clickable
+        score3Button1.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        //rounding corners
+        score3Button1.layer.cornerRadius = 15
+        score3Button1.layer.masksToBounds = true
+        //tag is used for differentiating buttons
+        score3Button1.tag = 3
+
+//"Other Ways to Get Points" label
+        moreOptionsLabel.frame = CGRect(x: (self.view.frame.width / 2) - 217.5, y: 667, width: 300, height: 75)
+        moreOptionsLabel.text = "Other Ways to Get Points:"
+        self.view.addSubview(moreOptionsLabel)
+        //text alignment
+        moreOptionsLabel.textAlignment = .center
+        //text colour
+        moreOptionsLabel.textColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
+        //changing font
+        moreOptionsLabel.font = UIFont(name: "Avenir Next", size: 18)
+        moreOptionsLabel.font = moreOptionsLabel.font.italic
+
+//"More Tasks" Button
+        moreOptionsButton.frame = CGRect(x: (self.view.frame.width / 2) - 120, y: 720, width: 240, height: 75)
+        moreOptionsButton.setTitle("More Tasks", for: .normal)
+        view.addSubview(moreOptionsButton)
+        //background color
+        moreOptionsButton.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
+        //text colour
+        moreOptionsButton.setTitleColor(UIColorFromHex(rgbValue: 0xDDE4DD, alpha: 1), for: .normal)
+        //changing font
+        moreOptionsButton.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        //rounding corners
+        moreOptionsButton.layer.cornerRadius =  15
+        moreOptionsButton.layer.masksToBounds = true
+        //making button clickable
+        moreOptionsButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        //tags for differentiating buttons
+        moreOptionsButton.tag = 5
+        
+//"Instrutions" button
+        instrucButton.frame = CGRect(x: (self.view.frame.width / 2) - 62.5, y: 820, width: 125, height: 40)
+        instrucButton.setTitle("Instructions", for: .normal)
+        view.addSubview(instrucButton)
+        //background color
+        instrucButton.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
+        //text colour
+        instrucButton.setTitleColor(UIColorFromHex(rgbValue: 0xDDE4DD, alpha: 1), for: .normal)
+        //changing font
+        instrucButton.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        //rounding corners
+        instrucButton.layer.cornerRadius =  15
+        instrucButton.layer.masksToBounds = true
+        //making button clickable
+        instrucButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        //tags for differentiating buttons
+        instrucButton.tag = 7
     }
         
 //function for when first button is tapped
@@ -295,38 +425,44 @@ class ViewController: UIViewController {
             pointsTemp = pointsTemp + 10
             titleLabel.text = "\(pointsTemp)\n Points"
             }
-        
-            if pointsTemp >= 10 {
-                imageView1.isHidden = false
+            if sender.tag == 3 {
+                score3Button1.backgroundColor = UIColorFromHex(rgbValue: 0xDCECB0)
+                score3Button2.backgroundColor = UIColorFromHex(rgbValue: 0xDCECB0)
+                pointsTemp = pointsTemp + 15
+                titleLabel.text = "\(pointsTemp)\n Points"
             }
-            if pointsTemp >= 15 {
-                imageView2.isHidden = false
-            }
-            if pointsTemp >= 20 {
-                imageView3.isHidden = false
-            }
-            if pointsTemp >= 25 {
-                imageView4.isHidden = false
-            }
-            if pointsTemp >= 30 {
-                imageView5.isHidden = false
-            }
-            if pointsTemp >= 35 {
-                imageView6.isHidden = false
-            }
-            if pointsTemp >= 40 {
-                imageView7.isHidden = false
-            }
-            if pointsTemp >= 45 {
-                imageView8.isHidden = false
-            }
-            if pointsTemp >= 50 {
-                imageView9.isHidden = false
-            }
-            if pointsTemp >= 55 {
-                imageView10.isHidden = false
-    
+        if pointsTemp >= 10 {
+            imageView1.isHidden = false
         }
+        if pointsTemp >= 15 {
+            imageView2.isHidden = false
+        }
+        if pointsTemp >= 20 {
+            imageView3.isHidden = false
+        }
+        if pointsTemp >= 25 {
+            imageView4.isHidden = false
+        }
+        if pointsTemp >= 30 {
+            imageView5.isHidden = false
+        }
+        if pointsTemp >= 35 {
+            imageView6.isHidden = false
+        }
+        if pointsTemp >= 40 {
+            imageView7.isHidden = false
+        }
+        /* if pointsTemp >= 45 {
+            imageView8.isHidden = false
+        }
+        if pointsTemp >= 50 {
+            imageView9.isHidden = false
+        }
+        if pointsTemp >= 55 {
+            imageView10.isHidden = false
+         
+    } */
+        
         
         // we have to grab this view context to be able to work with Core Data
         if var context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
@@ -342,6 +478,14 @@ class ViewController: UIViewController {
           try? context.save()
 
           navigationController?.popViewController(animated: true)
+        }
+        
+        if sender.tag == 11 {
+            performSegue(withIdentifier: "recyclingSegue", sender: self)
+        }
+        
+        if sender.tag == 7 {
+            performSegue(withIdentifier: "instrucSegue", sender: self)
         }
     }
 

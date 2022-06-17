@@ -16,6 +16,8 @@
 		AE57707F2859048C00E8AB23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE57707E2859048C00E8AB23 /* Assets.xcassets */; };
 		AE5770822859048C00E8AB23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5770802859048C00E8AB23 /* LaunchScreen.storyboard */; };
 		AECF8F8F285BFBB2000C5C38 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F8E285BFBB2000C5C38 /* Points.swift */; };
+		AECF8F91285C5AC2000C5C38 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F90285C5AC2000C5C38 /* UIFont.swift */; };
+		AECF8F93285C7136000C5C38 /* RecyclingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		AE5770812859048C00E8AB23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE5770832859048C00E8AB23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AECF8F8E285BFBB2000C5C38 /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
+		AECF8F90285C5AC2000C5C38 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +50,6 @@
 		AE5770662859048700E8AB23 = {
 			isa = PBXGroup;
 			children = (
-				A4311925285B68760080DD7F /* firstViewController.swift */,
 				AE5770712859048700E8AB23 /* Greener */,
 				AE5770702859048700E8AB23 /* Products */,
 			);
@@ -65,9 +68,12 @@
 			children = (
 				AE5770722859048700E8AB23 /* AppDelegate.swift */,
 				AE5770742859048700E8AB23 /* SceneDelegate.swift */,
+				A4311925285B68760080DD7F /* firstViewController.swift */,
 				AE5770762859048700E8AB23 /* ViewController.swift */,
 				AECF8F8E285BFBB2000C5C38 /* Points.swift */,
+				AECF8F90285C5AC2000C5C38 /* UIFont.swift */,
 				AE5770782859048700E8AB23 /* Main.storyboard */,
+				AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */,
 				AE57707E2859048C00E8AB23 /* Assets.xcassets */,
 				AE5770802859048C00E8AB23 /* LaunchScreen.storyboard */,
 				AE5770832859048C00E8AB23 /* Info.plist */,
@@ -150,9 +156,11 @@
 				AE57707D2859048700E8AB23 /* Greener.xcdatamodeld in Sources */,
 				A4311926285B68770080DD7F /* firstViewController.swift in Sources */,
 				AE5770772859048700E8AB23 /* ViewController.swift in Sources */,
+				AECF8F91285C5AC2000C5C38 /* UIFont.swift in Sources */,
 				AE5770732859048700E8AB23 /* AppDelegate.swift in Sources */,
 				AECF8F8F285BFBB2000C5C38 /* Points.swift in Sources */,
 				AE5770752859048700E8AB23 /* SceneDelegate.swift in Sources */,
+				AECF8F93285C7136000C5C38 /* RecyclingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
