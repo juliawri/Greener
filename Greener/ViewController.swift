@@ -143,35 +143,53 @@ class ViewController: UIViewController {
 //purple flower image
         view.addSubview(imageView1)
         imageView1.frame = CGRect(x: (self.view.frame.width / 2) + 40, y: 700, width: 160, height: 200)
-        imageView1.isHidden = true
+        //setting if image is hidden
+        if points1.number < 20 {
+            imageView1.isHidden = true
+        }
     
 //redflower image
         view.addSubview(imageView2)
         imageView2.frame = CGRect(x: (self.view.frame.width / 2) - 233, y: 700, width: 160, height: 200)
-        imageView2.isHidden = true
+        //setting if image is hiddem
+        if points1.number < 40 {
+            imageView2.isHidden = true
+        }
 
 //orange flower image
         view.addSubview(imageView3)
         imageView3.frame = CGRect(x: (self.view.frame.width / 2) + 10, y: 0, width: 200, height: 160)
-        imageView3.isHidden = true
+        //setting if image is hidden
+        if points1.number < 60 {
+            imageView3.isHidden = true
+        }
 
 //bee image
         view.addSubview(imageView4)
         imageView4.frame = CGRect(x: (self.view.frame.width / 2) - 200, y: 425, width: 160, height: 160)
-        imageView4.isHidden = true
+        //setting if image is hidden
+        if points1.number < 80 {
+            imageView4.isHidden = true
+        }
 
 //caterpillar image
         imageView5.transform = imageView5.transform.rotated(by: .pi * 1.5)
         view.addSubview(imageView5)
         imageView5.frame = CGRect(x: (self.view.frame.width / 2) + 112, y: 400, width: 160, height: 200)
-        imageView5.isHidden = true
-        
+        //setting if image is hiddem
+        if points1.number < 100 {
+            imageView5.isHidden = true
+        }
+    
 
 //snail image
         view.addSubview(imageView6)
         imageView6.transform = imageView5.transform.rotated(by: .pi * 1.95)
         imageView6.frame = CGRect(x: (self.view.frame.width / 2) + 109 , y: 150, width: 160, height: 145)
-        imageView6.isHidden = true
+        //setting if image hidden
+        if points1.number < 120 {
+            imageView6.isHidden = true
+        }
 
 //slug image
         view.addSubview(imageView7)
