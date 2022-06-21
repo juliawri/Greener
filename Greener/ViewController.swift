@@ -10,23 +10,12 @@ import SwiftUI
 import CoreData
 class ViewController: UIViewController {
     
-   var points1 = Points()
-    //var newPoints : [PointsCD] = []
-    //how many points user has
-     var pointsTemp2 = "0"
-    /* func getPoints() -> [PointsCD] {
-      if var context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-
-        if var coreDataPoints = try? context.fetch(PointsCD.fetchRequest()) as? [PointsCD] {
-            newPoints = coreDataPoints
-        }
-      }
-         return newPoints
-    }
+    var defaults = UserDefaults.standard
     
-    func unwrap() {
-        var pointsTemp2 = getPoints().joined(separator: "")
-    } */
+   var points1 = Points()
+     var pointsTemp2 = 0
+    var pointsCD = [PointsCD] ()
+    
 
     // declaring "Greener" label
     var greenerLabel = UILabel()
@@ -134,10 +123,7 @@ class ViewController: UIViewController {
         }()
     
     
-    //array of images
-   
-    
-    var images = [UIImage(named: "Circle_1")!, UIImage(named: "Circle_2")!]
+
     
     // function to allow hex codes to be used
     func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0)->UIColor {
@@ -151,8 +137,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+ 
+        points1.number = defaults.integer(forKey: "age")
         
-
 //purple flower image
         view.addSubview(imageView1)
         imageView1.frame = CGRect(x: (self.view.frame.width / 2) + 40, y: 700, width: 160, height: 200)
@@ -438,9 +425,8 @@ class ViewController: UIViewController {
         instrucButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         //tags for differentiating buttons
         instrucButton.tag = 7
+               
     }
-   
-    
 //function for when first button is tapped
     @objc func buttonAction(sender: UIButton!) {
             if sender.tag == 1 {
@@ -448,7 +434,6 @@ class ViewController: UIViewController {
                 score1Button2.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
                 points1.number = points1.number + 5
             titleLabel.text = "\(points1.number)\n Points"
-                
                 
             }
             if sender.tag == 2 {
@@ -495,22 +480,8 @@ class ViewController: UIViewController {
          
     } */
         
+        defaults.set(points1.number, forKey: "age")
         
-        // we have to grab this view context to be able to work with Core Data
-      /* if var context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-
-          // we are creating a new ToDoCD object here, naming it toDo
-          var pointsInt = PointsCD(entity: PointsCD.entity(), insertInto: context)
-
-          // if the titleTextField has text, we will call that text titleText
-            
-           pointsInt.points = Int32(pointsTemp2)
- 
-
-          try? context.save()
-
-          navigationController?.popViewController(animated: true)
-        } */
         
         if sender.tag == 11 {
             performSegue(withIdentifier: "recyclingSegue", sender: self)
