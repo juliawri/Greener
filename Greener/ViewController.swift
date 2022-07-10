@@ -10,6 +10,10 @@ import SwiftUI
 import CoreData
 class ViewController: UIViewController {
     
+    //declaring UIScrollView and UIView
+    let scrollView = UIScrollView()
+    let contentView = UIView()
+    
     var defaults = UserDefaults.standard
     
     var pointsObj = Points()
@@ -136,6 +140,23 @@ class ViewController: UIViewController {
  
         pointsObj.number = defaults.integer(forKey: "age")
         
+        func setupScrollView(){
+            scrollView.translatesAutoresizingMaskIntoConstraints = false
+            contentView.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(scrollView)
+            scrollView.addSubview(contentView)
+            
+            scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+            scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+            
+            contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+                }
+        setupScrollView()
 //purple flower image
         view.addSubview(purpleFlower)
         purpleFlower.frame = CGRect(x: (self.view.frame.width / 2) + 40, y: 700, width: 160, height: 200)
@@ -439,7 +460,20 @@ class ViewController: UIViewController {
         instrucButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         //tags for differentiating buttons
         instrucButton.tag = 7
-               
+    
+        func setupViews(){
+                contentView.addSubview(titleLabel)
+                titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+                titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+                titleLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 3/4).isActive = true
+                
+                contentView.addSubview(subtitleLabel)
+                subtitleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+                subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 25).isActive = true
+                subtitleLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 3/4).isActive = true
+                subtitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+            }
+        setupViews()
     }
 //function for when first button is tapped
     @objc func buttonAction(sender: UIButton!) {
