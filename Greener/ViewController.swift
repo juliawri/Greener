@@ -12,14 +12,11 @@ class ViewController: UIViewController {
     
     var defaults = UserDefaults.standard
     
-   var points1 = Points()
-     var pointsTemp2 = 0
-    var pointsCD = [PointsCD] ()
+    var pointsObj = Points()
     
 
     // declaring "Greener" label
     var greenerLabel = UILabel()
-    
 
    //declaring points labels
     var titleLabel = UILabel()
@@ -27,11 +24,10 @@ class ViewController: UIViewController {
     //declaring "Suggested Actions" label
     var suggLabel = UILabel()
     
-    
     //declaring first points buttons
-    var score1Button3 = UIButton()
     var score1Button1 = UIButton()
     var score1Button2 = UIButton()
+    var score1Button3 = UIButton()
     
     //declaring second points buttons
     var score2Button1 = UIButton()
@@ -53,73 +49,73 @@ class ViewController: UIViewController {
     var instrucButton = UIButton()
     
     //declaring purple flower image
-    var imageView1: UIImageView = {
-           let theImageView1 = UIImageView()
-           theImageView1.image = UIImage(named: "purpleflower")
-           return theImageView1
+    var purpleFlower: UIImageView = {
+           let thePurpleFlower = UIImageView()
+           thePurpleFlower.image = UIImage(named: "purpleflower")
+           return thePurpleFlower
         }()
     
     //declaring red flower image
-    var imageView2: UIImageView = {
-           let theImageView1 = UIImageView()
-           theImageView1.image = UIImage(named: "redflower")
-           return theImageView1
+    var redFlower: UIImageView = {
+           let theRedFlower = UIImageView()
+           theRedFlower.image = UIImage(named: "redflower")
+           return theRedFlower
         }()
     
     //declaring orange flower image
-    var imageView3: UIImageView = {
-           let theImageView1 = UIImageView()
-           theImageView1.image = UIImage(named: "orangeflower")
-           return theImageView1
+    var orangeFlower: UIImageView = {
+           let theOrangeFlower = UIImageView()
+           theOrangeFlower.image = UIImage(named: "orangeflower")
+           return theOrangeFlower
         }()
     
     //declaring bee image
-    var imageView4: UIImageView = {
-           let theImageView1 = UIImageView()
-           theImageView1.image = UIImage(named: "bee")
-           return theImageView1
+    var bee: UIImageView = {
+           let theBee = UIImageView()
+           theBee.image = UIImage(named: "bee")
+           return theBee
         }()
     
     //declaring caterpillar image
-    var imageView5: UIImageView = {
-           let theImageView1 = UIImageView()
-           theImageView1.image = UIImage(named: "caterpillar")
-           return theImageView1
+    var caterpillar: UIImageView = {
+           let theCaterpillar = UIImageView()
+           theCaterpillar.image = UIImage(named: "caterpillar")
+           return theCaterpillar
         }()
     
     //declaring snail image
-    var imageView6: UIImageView = {
-           let theImageView1 = UIImageView()
-           theImageView1.image = UIImage(named: "snail")
-           return theImageView1
+    var snail: UIImageView = {
+           let theSnail = UIImageView()
+           theSnail.image = UIImage(named: "snail")
+           return theSnail
         }()
     
     //declaring slug image
-    var imageView7: UIImageView = {
-           let theImageView1 = UIImageView()
-           theImageView1.image = UIImage(named: "slug")
-           return theImageView1
+    var slug: UIImageView = {
+           let theSlug = UIImageView()
+           theSlug.image = UIImage(named: "slug")
+           return theSlug
         }()
     
     //declaring ant image
-    var imageView8: UIImageView = {
-           let theImageView1 = UIImageView()
-           theImageView1.image = UIImage(named: "ant")
-           return theImageView1
+    var ant: UIImageView = {
+           let theAnt = UIImageView()
+           theAnt.image = UIImage(named: "ant")
+           return theAnt
         }()
     
     //declaring ladybug image
-    var imageView9: UIImageView = {
-           let theImageView1 = UIImageView()
-           theImageView1.image = UIImage(named: "ladybug")
-           return theImageView1
+    var ladybug: UIImageView = {
+           let theLadybug = UIImageView()
+           theLadybug.image = UIImage(named: "ladybug")
+           return theLadybug
         }()
     
     //declaring beetle image
-    var imageView10: UIImageView = {
-           let theImageView1 = UIImageView()
-           theImageView1.image = UIImage(named: "beetle")
-           return theImageView1
+    var beetle: UIImageView = {
+           let theBeetle = UIImageView()
+           theBeetle.image = UIImage(named: "beetle")
+           return theBeetle
         }()
     
     
@@ -138,79 +134,79 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        points1.number = defaults.integer(forKey: "age")
+        pointsObj.number = defaults.integer(forKey: "age")
         
 //purple flower image
-        view.addSubview(imageView1)
-        imageView1.frame = CGRect(x: (self.view.frame.width / 2) + 40, y: 700, width: 160, height: 200)
+        view.addSubview(purpleFlower)
+        purpleFlower.frame = CGRect(x: (self.view.frame.width / 2) + 40, y: 700, width: 160, height: 200)
         //setting if image is hidden
-        if points1.number < 20 {
-            imageView1.isHidden = true
+        if pointsObj.number < 20 {
+            purpleFlower.isHidden = true
         }
     
 //redflower image
-        view.addSubview(imageView2)
-        imageView2.frame = CGRect(x: (self.view.frame.width / 2) - 233, y: 700, width: 160, height: 200)
+        view.addSubview(redFlower)
+        redFlower.frame = CGRect(x: (self.view.frame.width / 2) - 233, y: 700, width: 160, height: 200)
         //setting if image is hiddem
-        if points1.number < 40 {
-            imageView2.isHidden = true
+        if pointsObj.number < 40 {
+            redFlower.isHidden = true
         }
 
 //orange flower image
-        view.addSubview(imageView3)
-        imageView3.frame = CGRect(x: (self.view.frame.width / 2) + 10, y: 0, width: 200, height: 160)
+        view.addSubview(orangeFlower)
+        orangeFlower.frame = CGRect(x: (self.view.frame.width / 2) + 10, y: 0, width: 200, height: 160)
         //setting if image is hidden
-        if points1.number < 60 {
-            imageView3.isHidden = true
+        if pointsObj.number < 60 {
+            orangeFlower.isHidden = true
         }
 
 //bee image
-        view.addSubview(imageView4)
-        imageView4.frame = CGRect(x: (self.view.frame.width / 2) - 200, y: 425, width: 160, height: 160)
+        view.addSubview(bee)
+        bee.frame = CGRect(x: (self.view.frame.width / 2) - 200, y: 425, width: 160, height: 160)
         //setting if image is hidden
-        if points1.number < 80 {
-            imageView4.isHidden = true
+        if pointsObj.number < 80 {
+            bee.isHidden = true
         }
 
 //caterpillar image
-        imageView5.transform = imageView5.transform.rotated(by: .pi * 1.5)
-        view.addSubview(imageView5)
-        imageView5.frame = CGRect(x: (self.view.frame.width / 2) + 112, y: 400, width: 160, height: 200)
+        caterpillar.transform = caterpillar.transform.rotated(by: .pi * 1.5)
+        view.addSubview(caterpillar)
+        caterpillar.frame = CGRect(x: (self.view.frame.width / 2) + 112, y: 400, width: 160, height: 200)
         //setting if image is hiddem
-        if points1.number < 100 {
-            imageView5.isHidden = true
+        if pointsObj.number < 100 {
+            caterpillar.isHidden = true
         }
     
 
 //snail image
-        view.addSubview(imageView6)
-        imageView6.transform = imageView5.transform.rotated(by: .pi * 1.95)
-        imageView6.frame = CGRect(x: (self.view.frame.width / 2) + 109 , y: 150, width: 160, height: 145)
+        view.addSubview(snail)
+        snail.transform = caterpillar.transform.rotated(by: .pi * 1.95)
+        snail.frame = CGRect(x: (self.view.frame.width / 2) + 109 , y: 150, width: 160, height: 145)
         //setting if image hidden
-        if points1.number < 120 {
-            imageView6.isHidden = true
+        if pointsObj.number < 120 {
+            snail.isHidden = true
         }
 
 //slug image
-        view.addSubview(imageView7)
-        imageView7.transform = imageView7.transform.rotated(by: .pi + 1.5)
-        imageView7.frame = CGRect(x: (self.view.frame.width / 2) - 165, y: 150, width: 160, height: 160)
-        imageView7.isHidden = true
+        view.addSubview(slug)
+        slug.transform = slug.transform.rotated(by: .pi + 1.5)
+        slug.frame = CGRect(x: (self.view.frame.width / 2) - 165, y: 150, width: 160, height: 160)
+        slug.isHidden = true
 
 //ant image
-        view.addSubview(imageView8)
-        imageView8.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-        imageView8.isHidden = true
+        view.addSubview(ant)
+        ant.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+        ant.isHidden = true
 
 //ladybug image
-        view.addSubview(imageView9)
-        imageView9.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-        imageView9.isHidden = true
+        view.addSubview(ladybug)
+        ladybug.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+        ladybug.isHidden = true
 
 //beetle image
-        view.addSubview(imageView10)
-        imageView10.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
-        imageView10.isHidden = true
+        view.addSubview(beetle)
+        beetle.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
+        beetle.isHidden = true
    
 //"Greener" Label
         greenerLabel.frame = CGRect(x: (self.view.frame.width / 2) - 150, y: 60, width: 300, height: 87.5)
@@ -229,9 +225,9 @@ class ViewController: UIViewController {
         greenerLabel.layer.cornerRadius =  5
         greenerLabel.layer.masksToBounds = true
         
-// circular title label at top of page
+// circular title label with number of points at top of page
         titleLabel.frame = CGRect(x: (self.view.frame.width / 2) - 100, y: 162.5, width: 200, height: 200)
-        titleLabel.text = "\(points1.number)\n Points"
+        titleLabel.text = "\(pointsObj.number)\n Points"
         self.view.addSubview(titleLabel)
         // number of lines
         titleLabel.numberOfLines = 2
@@ -447,58 +443,67 @@ class ViewController: UIViewController {
     }
 //function for when first button is tapped
     @objc func buttonAction(sender: UIButton!) {
-            if sender.tag == 1 {
-                score1Button1.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
-                score1Button2.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
-                points1.number = points1.number + 5
-            titleLabel.text = "\(points1.number)\n Points"
-                
-            }
-            if sender.tag == 2 {
-                score2Button1.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
-                score2Button2.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
-            points1.number = points1.number + 10
-            titleLabel.text = "\(points1.number)\n Points"
-            }
-            if sender.tag == 3 {
-                score3Button1.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
-                score3Button2.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
-                points1.number = points1.number + 15
-                titleLabel.text = "\(points1.number)\n Points"
-            }
-        if points1.number >= 20 {
-            imageView1.isHidden = false
+        if sender.tag == 1 {
+            score1Button1.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
+            score1Button2.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
+            pointsObj.number = pointsObj.number + 5
+            titleLabel.text = "\(pointsObj.number)\n Points"
         }
-        if points1.number >= 40 {
-            imageView2.isHidden = false
+    
+        if sender.tag == 2 {
+            score2Button1.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
+            score2Button2.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
+            pointsObj.number = pointsObj.number + 10
+            titleLabel.text = "\(pointsObj.number)\n Points"
         }
-        if points1.number >= 60 {
-            imageView3.isHidden = false
+    
+        if sender.tag == 3 {
+            score3Button1.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
+            score3Button2.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
+            pointsObj.number = pointsObj.number + 15
+            titleLabel.text = "\(pointsObj.number)\n Points"
         }
-        if points1.number >= 80 {
-            imageView4.isHidden = false
+        
+        
+        if pointsObj.number >= 20 {
+            purpleFlower.isHidden = false
         }
-        if points1.number >= 100 {
-            imageView5.isHidden = false
+        
+        if pointsObj.number >= 40 {
+            redFlower.isHidden = false
         }
-        if points1.number >= 120 {
-            imageView6.isHidden = false
+        
+        if pointsObj.number >= 60 {
+            orangeFlower.isHidden = false
         }
-        if points1.number >= 140 {
-            imageView7.isHidden = false
+        
+        if pointsObj.number >= 80 {
+            bee.isHidden = false
         }
-        /* if pointsTemp >= 45 {
-            imageView8.isHidden = false
+        
+        if pointsObj.number >= 100 {
+            caterpillar.isHidden = false
         }
-        if pointsTemp >= 50 {
-            imageView9.isHidden = false
+        
+        if pointsObj.number >= 120 {
+            snail.isHidden = false
         }
-        if pointsTemp >= 55 {
-            imageView10.isHidden = false
+        
+        if pointsObj.number >= 140 {
+            slug.isHidden = false
+        }
+        /* if pointsObj.number >= 45 {
+            ant.isHidden = false
+        }
+        if pointsObj.number >= 50 {
+            ladybug.isHidden = false
+        }
+        if pointsObj.number >= 55 {
+            beetle.isHidden = false
          
     } */
         
-        defaults.set(points1.number, forKey: "age")
+        defaults.set(pointsObj.number, forKey: "age")
         
         
         if sender.tag == 11 {
