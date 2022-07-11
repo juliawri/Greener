@@ -140,7 +140,7 @@ class ViewController: UIViewController {
  
         pointsObj.number = defaults.integer(forKey: "age")
         
-        func setupScrollView(){
+         /*func setupScrollView(){
             scrollView.translatesAutoresizingMaskIntoConstraints = false
             contentView.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview(scrollView)
@@ -156,7 +156,7 @@ class ViewController: UIViewController {
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
                 }
-        setupScrollView()
+        setupScrollView() */
 //purple flower image
         view.addSubview(purpleFlower)
         purpleFlower.frame = CGRect(x: (self.view.frame.width / 2) + 40, y: 700, width: 160, height: 200)
@@ -461,7 +461,7 @@ class ViewController: UIViewController {
         //tags for differentiating buttons
         instrucButton.tag = 7
     
-        func setupViews(){
+       /* func setupViews(){
                 contentView.addSubview(titleLabel)
                 titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
                 titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
@@ -473,7 +473,7 @@ class ViewController: UIViewController {
                 subtitleLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 3/4).isActive = true
                 subtitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
             }
-        setupViews()
+        setupViews() */
     }
 //function for when first button is tapped
     @objc func buttonAction(sender: UIButton!) {

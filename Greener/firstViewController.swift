@@ -25,7 +25,7 @@ class firstViewController: UIViewController {
         super.viewDidLoad()
 //"Instructions" label
         titleLabel.font = UIFont(name: "Avenir Next", size: 34)
-        titleLabel.frame = CGRect(x: (self.view.frame.width / 2) - 150, y: 20, width: 300, height: 75)
+        //titleLabel.frame = CGRect(x: (self.view.frame.width / 2) - 150, y: 20, width: 300, height: 75)
         titleLabel.text = "Instructions:"
         self.view.addSubview(titleLabel)
         //text alignment
@@ -35,7 +35,18 @@ class firstViewController: UIViewController {
         titleLabel.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
            titleLabel.layer.cornerRadius = 15
            titleLabel.layer.masksToBounds = true
-
+        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        //titleLabel.heightAnchor.constraint(equalToConstant: 75)
+        //titleLabel.widthAnchor.constraint(equalToConstant: 300)
+        var constraints = [
+            titleLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor, constant: 50),
+            titleLabel.rightAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: 50),
+           titleLabel.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 50),
+           titleLabel.bottomAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 500)
+         ]
+           
+           NSLayoutConstraint.activate(constraints)
 
         
     }
