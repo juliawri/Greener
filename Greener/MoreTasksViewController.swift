@@ -7,15 +7,34 @@
 
 import UIKit
 
-class MoreTasksViewController: UIViewController {
-
+class ResultsVC: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBlue
+    }
+}
 
+class MoreTasksViewController: UIViewController, UISearchResultsUpdating {
+    // var resultsVCObj : ResultsVC = ResultsVC()
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
         // Do any additional setup after loading the view.
     }
     
-
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            return
+        }
+        let vc = searchController.searchResultsController as? ResultsVC
+        vc?.view.backgroundColor = .yellow
+        print(text)
+    }
     /*
     // MARK: - Navigation
 

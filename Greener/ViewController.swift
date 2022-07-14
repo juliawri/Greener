@@ -139,38 +139,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
  
         pointsObj.number = defaults.integer(forKey: "age")
-        
-        /* func setupScrollView(){
-            scrollView.translatesAutoresizingMaskIntoConstraints = false
-            contentView.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(scrollView)
-            scrollView.addSubview(contentView)
-            
-            scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-            scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-            scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-            
-            contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
-            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
-            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
-            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
-                }
-        setupScrollView() */
-    
-       /* func setupViews(){
-                contentView.addSubview(titleLabel)
-                titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-                titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
-                titleLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 3/4).isActive = true
-                
-                contentView.addSubview(greenerLabel)
-                greenerLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-                greenerLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 25).isActive = true
-                greenerLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 3/4).isActive = true
-                greenerLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-            }
-        setupViews() */
+
     }
     
     override func viewDidLayoutSubviews() {
