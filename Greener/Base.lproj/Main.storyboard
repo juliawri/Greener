@@ -158,6 +158,37 @@
             </objects>
             <point key="canvasLocation" x="2204" y="-612"/>
         </scene>
+        <!--Search View Controller-->
+        <scene sceneID="vVP-wV-3uR">
+            <objects>
+                <viewController id="hfx-dD-2zP" customClass="SearchViewController" customModule="Greener" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tTU-2N-Kv2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9cY-Aq-7ZD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UYV-WJ-TOC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zf7-Fj-y5X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2887" y="-1267"/>
+        </scene>
+        <!--Search Results View Controller-->
+        <scene sceneID="pLE-Xm-QSg">
+            <objects>
+                <viewController id="G4a-Hb-xAy" customClass="SearchResultsViewController" customModule="Greener" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4yE-F8-Vji">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iAa-ep-wog"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mIV-oi-NYK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3574" y="-1268"/>
+        </scene>
         <!--More Tasks View Controller-->
         <scene sceneID="GKY-l6-xWo">
             <objects>
@@ -169,6 +200,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="A3q-OP-hzv"/>
+                    <connections>
+                        <segue destination="hfx-dD-2zP" kind="show" identifier="searchSegue" id="QBK-bb-fbF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqI-EX-2yN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

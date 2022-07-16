@@ -7,27 +7,37 @@
 
 import UIKit
 
-class ResultsVC: UIViewController {
+/* class ResultsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
     }
-}
+} */
 
-class MoreTasksViewController: UIViewController, UISearchResultsUpdating {
+class MoreTasksViewController: UIViewController {
     // var resultsVCObj : ResultsVC = ResultsVC()
-    let searchController = UISearchController(searchResultsController: nil)
     
+    var button = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchController.searchResultsUpdater = self
-        navigationItem.searchController = searchController
-        // Do any additional setup after loading the view.
+        
+        view.addSubview(button)
+        button.frame = CGRect(x: 30, y: 30, width: 200, height: 200)
+        button.backgroundColor = .red
+        button.tag = 1
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
     }
     
-    func updateSearchResults(for searchController: UISearchController) {
+    @objc func buttonAction(sender: UIButton!) {
+        
+        if sender.tag == 1 {
+            self.performSegue(withIdentifier: "searchSegue", sender: self)
+        }
+    }
+
+   /* func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else {
             return
         }
@@ -35,6 +45,8 @@ class MoreTasksViewController: UIViewController, UISearchResultsUpdating {
         vc?.view.backgroundColor = .yellow
         print(text)
     }
+    */
+    
     /*
     // MARK: - Navigation
 
@@ -43,6 +55,5 @@ class MoreTasksViewController: UIViewController, UISearchResultsUpdating {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
-
+     */
 }

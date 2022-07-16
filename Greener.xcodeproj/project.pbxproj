@@ -16,6 +16,8 @@
 		AE57707F2859048C00E8AB23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE57707E2859048C00E8AB23 /* Assets.xcassets */; };
 		AE5770822859048C00E8AB23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5770802859048C00E8AB23 /* LaunchScreen.storyboard */; };
 		AE7B70F6285CE7A40054A009 /* MoreTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7B70F5285CE7A40054A009 /* MoreTasksViewController.swift */; };
+		AE87E3C228823ACA00CFFCE5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E3C128823ACA00CFFCE5 /* SearchViewController.swift */; };
+		AE87E3C42882512200CFFCE5 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E3C32882512200CFFCE5 /* SearchResultsViewController.swift */; };
 		AECF8F8F285BFBB2000C5C38 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F8E285BFBB2000C5C38 /* Points.swift */; };
 		AECF8F91285C5AC2000C5C38 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F90285C5AC2000C5C38 /* UIFont.swift */; };
 		AECF8F93285C7136000C5C38 /* RecyclingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */; };
@@ -35,6 +37,8 @@
 		AE5770812859048C00E8AB23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE5770832859048C00E8AB23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE7B70F5285CE7A40054A009 /* MoreTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTasksViewController.swift; sourceTree = "<group>"; };
+		AE87E3C128823ACA00CFFCE5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		AE87E3C32882512200CFFCE5 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		AECF8F8E285BFBB2000C5C38 /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
 		AECF8F90285C5AC2000C5C38 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 				AECF8F90285C5AC2000C5C38 /* UIFont.swift */,
 				AE5770782859048700E8AB23 /* Main.storyboard */,
 				AE7B70F5285CE7A40054A009 /* MoreTasksViewController.swift */,
+				AE87E3C128823ACA00CFFCE5 /* SearchViewController.swift */,
+				AE87E3C32882512200CFFCE5 /* SearchResultsViewController.swift */,
 				AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */,
 				AE57707E2859048C00E8AB23 /* Assets.xcassets */,
 				AE5770802859048C00E8AB23 /* LaunchScreen.storyboard */,
@@ -171,11 +177,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE57707D2859048700E8AB23 /* Greener.xcdatamodeld in Sources */,
+				AE87E3C42882512200CFFCE5 /* SearchResultsViewController.swift in Sources */,
 				A4311926285B68770080DD7F /* firstViewController.swift in Sources */,
 				AE5770772859048700E8AB23 /* ViewController.swift in Sources */,
 				AECF8F91285C5AC2000C5C38 /* UIFont.swift in Sources */,
 				AE5770732859048700E8AB23 /* AppDelegate.swift in Sources */,
 				AECF8F8F285BFBB2000C5C38 /* Points.swift in Sources */,
+				AE87E3C228823ACA00CFFCE5 /* SearchViewController.swift in Sources */,
 				AEFC0922286165D6007D8A1B /* PointsCD+CoreDataProperties.swift in Sources */,
 				AE5770752859048700E8AB23 /* SceneDelegate.swift in Sources */,
 				AECF8F93285C7136000C5C38 /* RecyclingViewController.swift in Sources */,
