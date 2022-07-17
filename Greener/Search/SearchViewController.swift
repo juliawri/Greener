@@ -24,16 +24,26 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
         
         item.contentInsets = NSDirectionalEdgeInsets(
             top: 2,
-            leading: 2,
+            leading: 7,
             bottom: 2,
-            trailing: 2
+            trailing: 7
         )
         
         let group = NSCollectionLayoutGroup.horizontal(
-            layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(180)),
-            subitems: [item, item]
+            layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(150)),
+            subitem: item,
+            count: 2
         )
         
+        
+        group.contentInsets = NSDirectionalEdgeInsets(
+            //padding at top of group of two cells
+            top: 10,
+            leading: 0,
+            //padding at bottom of group of two cells
+            bottom: 10,
+            trailing: 0
+        )
         return NSCollectionLayoutSection(group: group)
     }))
     
@@ -45,8 +55,8 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
         navigationItem.searchController = searchController
         view.addSubview(collectionView)
         //registration for cell
-        collectionView.register(UICollectionViewCell.self,
-                                forCellWithReuseIdentifier: "cell")
+        collectionView.register(TaskCollectionViewCell.self,
+                                forCellWithReuseIdentifier: TaskCollectionViewCell.identfier)
         
         //adding delegate
         collectionView.delegate = self
@@ -92,8 +102,13 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .blue
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TaskCollectionViewCell.identfier, for: indexPath)
+                as? TaskCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        
+        cell.configure(with: "Task")
+        //cell.backgroundColor = .blue
         return cell
     }
 }
