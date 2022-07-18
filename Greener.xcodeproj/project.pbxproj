@@ -19,6 +19,7 @@
 		AE87E3C228823ACA00CFFCE5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E3C128823ACA00CFFCE5 /* SearchViewController.swift */; };
 		AE87E3C42882512200CFFCE5 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E3C32882512200CFFCE5 /* SearchResultsViewController.swift */; };
 		AE87E3C62883A0C500CFFCE5 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E3C52883A0C500CFFCE5 /* TaskCollectionViewCell.swift */; };
+		AE87E3C92884F1B500CFFCE5 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E3C82884F1B500CFFCE5 /* APICaller.swift */; };
 		AECF8F8F285BFBB2000C5C38 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F8E285BFBB2000C5C38 /* Points.swift */; };
 		AECF8F91285C5AC2000C5C38 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F90285C5AC2000C5C38 /* UIFont.swift */; };
 		AECF8F93285C7136000C5C38 /* RecyclingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */; };
@@ -41,6 +42,7 @@
 		AE87E3C128823ACA00CFFCE5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AE87E3C32882512200CFFCE5 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		AE87E3C52883A0C500CFFCE5 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
+		AE87E3C82884F1B500CFFCE5 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APICaller.swift; path = Greener/Managers/APICaller.swift; sourceTree = SOURCE_ROOT; };
 		AECF8F8E285BFBB2000C5C38 /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
 		AECF8F90285C5AC2000C5C38 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				AEFC0923286165EB007D8A1B /* Model */,
 				AE5770722859048700E8AB23 /* AppDelegate.swift */,
+				AE87E3CA2884F4D600CFFCE5 /* Managers */,
 				AE5770742859048700E8AB23 /* SceneDelegate.swift */,
 				A4311925285B68760080DD7F /* firstViewController.swift */,
 				AE5770762859048700E8AB23 /* ViewController.swift */,
@@ -105,6 +108,14 @@
 				AE87E3C32882512200CFFCE5 /* SearchResultsViewController.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		AE87E3CA2884F4D600CFFCE5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AE87E3C82884F1B500CFFCE5 /* APICaller.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		AEFC0923286165EB007D8A1B /* Model */ = {
@@ -200,6 +211,7 @@
 				AE5770752859048700E8AB23 /* SceneDelegate.swift in Sources */,
 				AECF8F93285C7136000C5C38 /* RecyclingViewController.swift in Sources */,
 				AE7B70F6285CE7A40054A009 /* MoreTasksViewController.swift in Sources */,
+				AE87E3C92884F1B500CFFCE5 /* APICaller.swift in Sources */,
 				AEFC0921286165D6007D8A1B /* PointsCD+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
