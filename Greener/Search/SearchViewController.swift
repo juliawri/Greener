@@ -32,16 +32,16 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(150)),
             subitem: item,
-            count: 2
+            count: 1
         )
         
         
         group.contentInsets = NSDirectionalEdgeInsets(
             //padding at top of group of two cells
-            top: 10,
+            top: 5,
             leading: 0,
             //padding at bottom of group of two cells
-            bottom: 10,
+            bottom: 5,
             trailing: 0
         )
         return NSCollectionLayoutSection(group: group)
@@ -49,10 +49,10 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = .systemBackground
         searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
         view.addSubview(collectionView)
         //registration for cell
         collectionView.register(TaskCollectionViewCell.self,

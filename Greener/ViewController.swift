@@ -137,8 +137,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        //saving number of points
         pointsObj.number = defaults.integer(forKey: "age")
+        // makes "Search" title on SearchViewController large
+        navigationController?.navigationBar.prefersLargeTitles = true
 
     }
     

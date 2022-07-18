@@ -158,7 +158,7 @@
             </objects>
             <point key="canvasLocation" x="2204" y="-612"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Search-->
         <scene sceneID="vVP-wV-3uR">
             <objects>
                 <viewController id="hfx-dD-2zP" customClass="SearchViewController" customModule="Greener" customModuleProvider="target" sceneMemberID="viewController">
@@ -168,7 +168,7 @@
                         <viewLayoutGuide key="safeArea" id="9cY-Aq-7ZD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="UYV-WJ-TOC"/>
+                    <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="always" id="UYV-WJ-TOC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zf7-Fj-y5X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

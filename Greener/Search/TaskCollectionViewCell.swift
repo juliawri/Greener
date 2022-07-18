@@ -14,7 +14,7 @@ class TaskCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.tintColor = .white
-        imageView.image = UIImage(systemName: "music.quarternote.3", withConfiguration: UIImage.SymbolConfiguration(pointSize: 50, weight: .regular))
+        imageView.image = UIImage(systemName: "heart", withConfiguration: UIImage.SymbolConfiguration(pointSize: 50, weight: .regular))
         return imageView
     }()
     
@@ -31,7 +31,12 @@ class TaskCollectionViewCell: UICollectionViewCell {
         .systemBlue,
         .systemGray,
         .systemCyan,
-        .systemOrange
+        .systemOrange,
+        .systemMint,
+        .systemIndigo,
+        .systemYellow,
+        .systemPurple,
+        .systemGreen
     ]
     
     override init(frame: CGRect) {
@@ -55,7 +60,7 @@ class TaskCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
         
         label.frame = CGRect(x: 10, y: contentView.frame.height / 2, width: contentView.frame.width - 2, height: contentView.frame.height / 2)
-        imageView.frame = CGRect(x: contentView.frame.width/2, y: 0, width: contentView.frame.width/2, height: contentView.frame.height/2)
+        imageView.frame = CGRect(x: contentView.frame.width/2, y: 5, width: contentView.frame.width/2, height: contentView.frame.height/2)
     }
     
     func configure(with title: String) {
