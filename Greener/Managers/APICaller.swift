@@ -8,9 +8,11 @@
 import Foundation
 
 
+
+
 // MARK: - Category
     
-public func getTasks(completion: (Result<String, Error>) -> Void) {
+/* public func getTasks(completion: (Result<String, Error>) -> Void) {
     CFHTTPMessageCreateRequest(with: URL(string: Constants.baseAPIURL + "/browse/categories?limit=2"), type: .GET)
     { request in
         let task = URLSession.shared.dataTask(with: request) { data, _, error in
@@ -29,4 +31,4 @@ public func getTasks(completion: (Result<String, Error>) -> Void) {
         }
         task.resume()
     }
-}
+} */
