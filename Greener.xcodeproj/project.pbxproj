@@ -21,6 +21,7 @@
 		AE87E3C42882512200CFFCE5 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E3C32882512200CFFCE5 /* SearchResultsViewController.swift */; };
 		AE87E3C62883A0C500CFFCE5 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E3C52883A0C500CFFCE5 /* TaskCollectionViewCell.swift */; };
 		AE87E3C92884F1B500CFFCE5 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E3C82884F1B500CFFCE5 /* APICaller.swift */; };
+		AEADC86D288F7D1000F77CDF /* ParseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEADC86C288F7D1000F77CDF /* ParseViewController.swift */; };
 		AECF8F8F285BFBB2000C5C38 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F8E285BFBB2000C5C38 /* Points.swift */; };
 		AECF8F91285C5AC2000C5C38 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F90285C5AC2000C5C38 /* UIFont.swift */; };
 		AECF8F93285C7136000C5C38 /* RecyclingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */; };
@@ -45,6 +46,7 @@
 		AE87E3C32882512200CFFCE5 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		AE87E3C52883A0C500CFFCE5 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE87E3C82884F1B500CFFCE5 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APICaller.swift; path = Greener/Managers/APICaller.swift; sourceTree = SOURCE_ROOT; };
+		AEADC86C288F7D1000F77CDF /* ParseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseViewController.swift; sourceTree = "<group>"; };
 		AECF8F8E285BFBB2000C5C38 /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
 		AECF8F90285C5AC2000C5C38 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				AECF8F90285C5AC2000C5C38 /* UIFont.swift */,
 				AE5770782859048700E8AB23 /* Main.storyboard */,
 				AE7B70F5285CE7A40054A009 /* MoreTasksViewController.swift */,
+				AEADC86C288F7D1000F77CDF /* ParseViewController.swift */,
 				AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */,
 				AE4A61FA288C295D00CC4842 /* Tasks.json */,
 				AE87E3C72883AACB00CFFCE5 /* Search */,
@@ -206,6 +209,7 @@
 				A4311926285B68770080DD7F /* firstViewController.swift in Sources */,
 				AE5770772859048700E8AB23 /* ViewController.swift in Sources */,
 				AECF8F91285C5AC2000C5C38 /* UIFont.swift in Sources */,
+				AEADC86D288F7D1000F77CDF /* ParseViewController.swift in Sources */,
 				AE87E3C62883A0C500CFFCE5 /* TaskCollectionViewCell.swift in Sources */,
 				AE5770732859048700E8AB23 /* AppDelegate.swift in Sources */,
 				AECF8F8F285BFBB2000C5C38 /* Points.swift in Sources */,

@@ -7,14 +7,6 @@
 
 import UIKit
 
-/* class ResultsVC: UIViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBlue
-    }
-} */
-
 class MoreTasksViewController: UIViewController {
     // var resultsVCObj : ResultsVC = ResultsVC()
     
