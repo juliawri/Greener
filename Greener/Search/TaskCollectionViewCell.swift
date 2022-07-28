@@ -8,6 +8,7 @@
 import UIKit
 
 class TaskCollectionViewCell: UICollectionViewCell {
+    
     static let identfier = "TaskCollectionViewCell"
     
     private let imageView: UIImageView = {

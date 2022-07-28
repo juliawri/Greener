@@ -7,7 +7,9 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UISearchResultsUpdating {
+class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate {
+    
+   let tasks = DataLoader().tasksData
     
     let searchController: UISearchController = {
         let vc = UISearchController(searchResultsController: SearchResultsViewController())
@@ -32,16 +34,16 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(150)),
             subitem: item,
-            count: 1
+            count: 2
         )
         
         
         group.contentInsets = NSDirectionalEdgeInsets(
             //padding at top of group of two cells
-            top: 5,
+            top: 10,
             leading: 0,
             //padding at bottom of group of two cells
-            bottom: 5,
+            bottom: 10,
             trailing: 0
         )
         return NSCollectionLayoutSection(group: group)
@@ -50,9 +52,12 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        // search controller styling and functionality
         searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        
         view.addSubview(collectionView)
         //registration for cell
         collectionView.register(TaskCollectionViewCell.self,
@@ -62,6 +67,8 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
         collectionView.delegate = self
         //adding data source
         collectionView.dataSource = self
+        //DataLoader().load()
+        //DataLoader().sort()
         
     }
     
@@ -98,7 +105,15 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 29
+        print(tasks.count)
+        print(tasks[0])
+        if tasks.count > 0 {
+            return tasks.count + 1
+        }
+        else {
+            return 2
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -107,6 +122,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             return UICollectionViewCell()
         }
         
+      // let task = tasks[indexPath.row - 1]
         cell.configure(with: "Task")
         //cell.backgroundColor = .blue
         return cell

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		217B7574289234CB001C5D55 /* TasksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217B7573289234CB001C5D55 /* TasksData.swift */; };
+		217B75762892359E001C5D55 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217B75752892359E001C5D55 /* DataLoader.swift */; };
 		A4311926285B68770080DD7F /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4311925285B68760080DD7F /* firstViewController.swift */; };
 		AE4A61FB288C295D00CC4842 /* Tasks.json in Sources */ = {isa = PBXBuildFile; fileRef = AE4A61FA288C295D00CC4842 /* Tasks.json */; };
 		AE5770732859048700E8AB23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5770722859048700E8AB23 /* AppDelegate.swift */; };
@@ -21,7 +23,6 @@
 		AE87E3C42882512200CFFCE5 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E3C32882512200CFFCE5 /* SearchResultsViewController.swift */; };
 		AE87E3C62883A0C500CFFCE5 /* TaskCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E3C52883A0C500CFFCE5 /* TaskCollectionViewCell.swift */; };
 		AE87E3C92884F1B500CFFCE5 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE87E3C82884F1B500CFFCE5 /* APICaller.swift */; };
-		AEADC86D288F7D1000F77CDF /* ParseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEADC86C288F7D1000F77CDF /* ParseViewController.swift */; };
 		AECF8F8F285BFBB2000C5C38 /* Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F8E285BFBB2000C5C38 /* Points.swift */; };
 		AECF8F91285C5AC2000C5C38 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F90285C5AC2000C5C38 /* UIFont.swift */; };
 		AECF8F93285C7136000C5C38 /* RecyclingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		217B7573289234CB001C5D55 /* TasksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksData.swift; sourceTree = "<group>"; };
+		217B75752892359E001C5D55 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		A4311925285B68760080DD7F /* firstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
 		AE4A61FA288C295D00CC4842 /* Tasks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Tasks.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		AE57706F2859048700E8AB23 /* Greener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Greener.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +49,6 @@
 		AE87E3C32882512200CFFCE5 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		AE87E3C52883A0C500CFFCE5 /* TaskCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE87E3C82884F1B500CFFCE5 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APICaller.swift; path = Greener/Managers/APICaller.swift; sourceTree = SOURCE_ROOT; };
-		AEADC86C288F7D1000F77CDF /* ParseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseViewController.swift; sourceTree = "<group>"; };
 		AECF8F8E285BFBB2000C5C38 /* Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Points.swift; sourceTree = "<group>"; };
 		AECF8F90285C5AC2000C5C38 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		217B757728923922001C5D55 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				217B7573289234CB001C5D55 /* TasksData.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
 		AE5770662859048700E8AB23 = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +104,10 @@
 				AECF8F90285C5AC2000C5C38 /* UIFont.swift */,
 				AE5770782859048700E8AB23 /* Main.storyboard */,
 				AE7B70F5285CE7A40054A009 /* MoreTasksViewController.swift */,
-				AEADC86C288F7D1000F77CDF /* ParseViewController.swift */,
 				AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */,
 				AE4A61FA288C295D00CC4842 /* Tasks.json */,
+				217B75752892359E001C5D55 /* DataLoader.swift */,
+				217B757728923922001C5D55 /* Tasks */,
 				AE87E3C72883AACB00CFFCE5 /* Search */,
 				AE57707E2859048C00E8AB23 /* Assets.xcassets */,
 				AE5770802859048C00E8AB23 /* LaunchScreen.storyboard */,
@@ -165,6 +176,7 @@
 				TargetAttributes = {
 					AE57706E2859048700E8AB23 = {
 						CreatedOnToolsVersion = 13.4;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -209,10 +221,10 @@
 				A4311926285B68770080DD7F /* firstViewController.swift in Sources */,
 				AE5770772859048700E8AB23 /* ViewController.swift in Sources */,
 				AECF8F91285C5AC2000C5C38 /* UIFont.swift in Sources */,
-				AEADC86D288F7D1000F77CDF /* ParseViewController.swift in Sources */,
 				AE87E3C62883A0C500CFFCE5 /* TaskCollectionViewCell.swift in Sources */,
 				AE5770732859048700E8AB23 /* AppDelegate.swift in Sources */,
 				AECF8F8F285BFBB2000C5C38 /* Points.swift in Sources */,
+				217B75762892359E001C5D55 /* DataLoader.swift in Sources */,
 				AE87E3C228823ACA00CFFCE5 /* SearchViewController.swift in Sources */,
 				AEFC0922286165D6007D8A1B /* PointsCD+CoreDataProperties.swift in Sources */,
 				AE5770752859048700E8AB23 /* SceneDelegate.swift in Sources */,
@@ -221,6 +233,7 @@
 				AE7B70F6285CE7A40054A009 /* MoreTasksViewController.swift in Sources */,
 				AE87E3C92884F1B500CFFCE5 /* APICaller.swift in Sources */,
 				AEFC0921286165D6007D8A1B /* PointsCD+CoreDataClass.swift in Sources */,
+				217B7574289234CB001C5D55 /* TasksData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -382,6 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JuliaWright.Greener;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -392,6 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

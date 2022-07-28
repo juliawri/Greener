@@ -1,12 +1,18 @@
-//
-//  Tasks.json
-//  Greener
-//
-//  Created by Julia Wright on 2022-07-23.
-//
 [
     {
-    "task" : "Turn off shower while lathering/applying soap"
-    "description":"Showers are the third largest water use in an average home (toilets and washing machines top the list). Turning off the faucet saves gallons and lowers your water bill."
+    "task" : "Turn off shower while lathering/applying soap",
+    "description" : "Showers are the third largest water use in an average home (toilets and washing machines top the list). Turning off the faucet saves gallons and lowers your water bill."
+    },
+    {
+        "task" : "task2",
+        "description" : "desc2"
+    },
+    {
+        "task" : "task3",
+        "description" : "desc3"
+    },
+    {
+        "task" : "task4",
+        "description" : "desc4"
     }
 ]
