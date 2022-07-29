@@ -18,7 +18,7 @@ public class DataLoader {
     
     func load() {
         
-        if let fileLocation = Bundle.main.url(forResource: "Tasks", withExtension: "json") {
+        if let fileLocation = Bundle.main.url(forResource: "tasks", withExtension: "json") {
             
             //do catch for errors
             do {
@@ -29,7 +29,7 @@ public class DataLoader {
                 self.tasksData = dataFromJson
                 
             } catch {
-                print(error)
+                print("error: \(error)")
             }
         }
     }

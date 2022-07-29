@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		217B7574289234CB001C5D55 /* TasksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217B7573289234CB001C5D55 /* TasksData.swift */; };
 		217B75762892359E001C5D55 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217B75752892359E001C5D55 /* DataLoader.swift */; };
+		217B75872892C86E001C5D55 /* tasks.json in Resources */ = {isa = PBXBuildFile; fileRef = 217B75862892C86E001C5D55 /* tasks.json */; };
 		A4311926285B68770080DD7F /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4311925285B68760080DD7F /* firstViewController.swift */; };
-		AE4A61FB288C295D00CC4842 /* Tasks.json in Sources */ = {isa = PBXBuildFile; fileRef = AE4A61FA288C295D00CC4842 /* Tasks.json */; };
 		AE5770732859048700E8AB23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5770722859048700E8AB23 /* AppDelegate.swift */; };
 		AE5770752859048700E8AB23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5770742859048700E8AB23 /* SceneDelegate.swift */; };
 		AE5770772859048700E8AB23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5770762859048700E8AB23 /* ViewController.swift */; };
@@ -33,8 +33,8 @@
 /* Begin PBXFileReference section */
 		217B7573289234CB001C5D55 /* TasksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksData.swift; sourceTree = "<group>"; };
 		217B75752892359E001C5D55 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		217B75862892C86E001C5D55 /* tasks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tasks.json; sourceTree = "<group>"; };
 		A4311925285B68760080DD7F /* firstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
-		AE4A61FA288C295D00CC4842 /* Tasks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Tasks.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		AE57706F2859048700E8AB23 /* Greener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Greener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5770722859048700E8AB23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE5770742859048700E8AB23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				217B7573289234CB001C5D55 /* TasksData.swift */,
+				217B75862892C86E001C5D55 /* tasks.json */,
+				217B75752892359E001C5D55 /* DataLoader.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -105,8 +107,6 @@
 				AE5770782859048700E8AB23 /* Main.storyboard */,
 				AE7B70F5285CE7A40054A009 /* MoreTasksViewController.swift */,
 				AECF8F92285C7136000C5C38 /* RecyclingViewController.swift */,
-				AE4A61FA288C295D00CC4842 /* Tasks.json */,
-				217B75752892359E001C5D55 /* DataLoader.swift */,
 				217B757728923922001C5D55 /* Tasks */,
 				AE87E3C72883AACB00CFFCE5 /* Search */,
 				AE57707E2859048C00E8AB23 /* Assets.xcassets */,
@@ -203,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				217B75872892C86E001C5D55 /* tasks.json in Resources */,
 				AE5770822859048C00E8AB23 /* LaunchScreen.storyboard in Resources */,
 				AE57707F2859048C00E8AB23 /* Assets.xcassets in Resources */,
 				AE57707A2859048700E8AB23 /* Main.storyboard in Resources */,
@@ -229,7 +230,6 @@
 				AEFC0922286165D6007D8A1B /* PointsCD+CoreDataProperties.swift in Sources */,
 				AE5770752859048700E8AB23 /* SceneDelegate.swift in Sources */,
 				AECF8F93285C7136000C5C38 /* RecyclingViewController.swift in Sources */,
-				AE4A61FB288C295D00CC4842 /* Tasks.json in Sources */,
 				AE7B70F6285CE7A40054A009 /* MoreTasksViewController.swift in Sources */,
 				AE87E3C92884F1B500CFFCE5 /* APICaller.swift in Sources */,
 				AEFC0921286165D6007D8A1B /* PointsCD+CoreDataClass.swift in Sources */,

@@ -34,16 +34,16 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(150)),
             subitem: item,
-            count: 2
+            count: 1
         )
         
         
         group.contentInsets = NSDirectionalEdgeInsets(
             //padding at top of group of two cells
-            top: 10,
+            top: 2,
             leading: 0,
             //padding at bottom of group of two cells
-            bottom: 10,
+            bottom: 2,
             trailing: 0
         )
         return NSCollectionLayoutSection(group: group)
@@ -105,14 +105,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(tasks.count)
-        print(tasks[0])
-        if tasks.count > 0 {
-            return tasks.count + 1
-        }
-        else {
-            return 2
-        }
+        return tasks.count
         
     }
     
@@ -122,8 +115,8 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
             return UICollectionViewCell()
         }
         
-      // let task = tasks[indexPath.row - 1]
-        cell.configure(with: "Task")
+        let task = tasks[indexPath.row]
+        cell.configure(with: task.task)
         //cell.backgroundColor = .blue
         return cell
     }

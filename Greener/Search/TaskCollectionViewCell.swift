@@ -22,7 +22,7 @@ class TaskCollectionViewCell: UICollectionViewCell {
     private let label: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.font = .systemFont(ofSize: 22, weight: .semibold)
+        label.font = UIFont(name: "Avenir Next", size: 18)
         return label
     }()
     
