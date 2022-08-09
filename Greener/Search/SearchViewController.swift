@@ -7,12 +7,16 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate {
+class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
     
    let tasks = DataLoader().tasksData
+    var taskNames = ["fillerString"]
+    var filteredTaskNames = ["filler"]
     
     let searchController: UISearchController = {
-        let vc = UISearchController(searchResultsController: SearchResultsViewController())
+        let vc = UISearchController()
         vc.searchBar.placeholder = "Songs, Artists, Albums"
         vc.searchBar.searchBarStyle = .minimal
         vc.definesPresentationContext = true
@@ -57,7 +61,6 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         searchController.searchBar.delegate = self
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-        
         view.addSubview(collectionView)
         //registration for cell
         collectionView.register(TaskCollectionViewCell.self,
@@ -67,9 +70,14 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         collectionView.delegate = self
         //adding data source
         collectionView.dataSource = self
-        //DataLoader().load()
-        //DataLoader().sort()
         
+        taskNames = []
+        filteredTaskNames = []
+        
+        //filling taskNames array with data
+        for task in tasks {
+            taskNames.append(task.task)
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -77,15 +85,51 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         collectionView.frame = view.bounds
     }
     
-    
     func updateSearchResults(for searchController: UISearchController) {
-        guard let resultsController = searchController.searchResultsController as? SearchResultsViewController, let query = searchController.searchBar.text,
-              !query.trimmingCharacters(in: .whitespaces).isEmpty else {
-            return
+        filteredTaskNames = []
+        if searchController.searchBar.text == "" {
+             filteredTaskNames = taskNames
+         }
+         
+         else {
+            for taskName in taskNames {
+             
+                if taskName.lowercased().contains(searchController.searchBar.text!.lowercased()) {
+                     
+                     filteredTaskNames.append(taskName)
+                 }
+             }
+         }
+            
+            self.collectionView.reloadData()
         }
-        
-        print(query)
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if searchController.searchBar.text == "" {
+            return taskNames.count
+        } else {
+            return filteredTaskNames.count
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TaskCollectionViewCell.identfier, for: indexPath)
+                as? TaskCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        if filteredTaskNames.count == 0 {
+            cell.configure(with: taskNames[indexPath.row])
+            return cell
+        } else {
+            cell.configure(with: filteredTaskNames[indexPath.row])
+            return cell
+        }
+    }
+
     /*
     // MARK: - Navigation
 
@@ -96,28 +140,4 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
     }
     */
 
-}
-
-extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tasks.count
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TaskCollectionViewCell.identfier, for: indexPath)
-                as? TaskCollectionViewCell else {
-            return UICollectionViewCell()
-        }
-        
-        let task = tasks[indexPath.row]
-        cell.configure(with: task.task)
-        //cell.backgroundColor = .blue
-        return cell
-    }
 }

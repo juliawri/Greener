@@ -4,15 +4,15 @@
     "description" : "Showers are the third largest water use in an average home (toilets and washing machines top the list). Turning off the faucet saves gallons and lowers your water bill."
     },
     {
-        "task" : "task2",
+        "task" : "Task2",
         "description" : "desc2"
     },
     {
-        "task" : "task3",
+        "task" : "Task3",
         "description" : "desc3"
     },
     {
-        "task" : "task4",
+        "task" : "Task4",
         "description" : "desc4"
     }
 ]
