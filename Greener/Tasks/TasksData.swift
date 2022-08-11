@@ -9,6 +9,7 @@ import Foundation
 
 struct TasksData: Codable {
     
-    var task: String
+    var name: String
     var description: String
+    var level: String
 }

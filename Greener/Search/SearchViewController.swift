@@ -13,11 +13,11 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
     
    let tasks = DataLoader().tasksData
     var taskNames = ["fillerString"]
-    var filteredTaskNames = ["filler"]
+    var filteredTaskNames = ["fillerString"]
     
     let searchController: UISearchController = {
         let vc = UISearchController()
-        vc.searchBar.placeholder = "Songs, Artists, Albums"
+        vc.searchBar.placeholder = "Search More Tasks"
         vc.searchBar.searchBarStyle = .minimal
         vc.definesPresentationContext = true
         return vc
@@ -76,7 +76,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         
         //filling taskNames array with data
         for task in tasks {
-            taskNames.append(task.task)
+            taskNames.append(task.name)
         }
     }
     

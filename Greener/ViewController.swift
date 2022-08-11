@@ -141,17 +141,9 @@ class ViewController: UIViewController {
         pointsObj.number = defaults.integer(forKey: "age")
         // makes "Search" title on SearchViewController large
         navigationController?.navigationBar.prefersLargeTitles = true
-
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
         
-        let scrollView = UIScrollView(frame: view.bounds)
-        view.addSubview(scrollView)
-
 //purple flower image
-        scrollView.addSubview(purpleFlower)
+        view.addSubview(purpleFlower)
         purpleFlower.frame = CGRect(x: (self.view.frame.width / 2) + 40, y: 700, width: 160, height: 200)
         //setting if image is hidden
         if pointsObj.number < 20 {
@@ -159,7 +151,7 @@ class ViewController: UIViewController {
         }
     
 //redflower image
-        scrollView.addSubview(redFlower)
+        view.addSubview(redFlower)
         redFlower.frame = CGRect(x: (self.view.frame.width / 2) - 233, y: 700, width: 160, height: 200)
         //setting if image is hiddem
         if pointsObj.number < 40 {
@@ -167,7 +159,7 @@ class ViewController: UIViewController {
         }
 
 //orange flower image
-        scrollView.addSubview(orangeFlower)
+        view.addSubview(orangeFlower)
         orangeFlower.frame = CGRect(x: (self.view.frame.width / 2) + 10, y: 0, width: 200, height: 160)
         //setting if image is hidden
         if pointsObj.number < 60 {
@@ -175,7 +167,7 @@ class ViewController: UIViewController {
         }
 
 //bee image
-        scrollView.addSubview(bee)
+        view.addSubview(bee)
         bee.frame = CGRect(x: (self.view.frame.width / 2) - 200, y: 425, width: 160, height: 160)
         //setting if image is hidden
         if pointsObj.number < 80 {
@@ -184,7 +176,7 @@ class ViewController: UIViewController {
 
 //caterpillar image
         caterpillar.transform = caterpillar.transform.rotated(by: .pi * 1.5)
-        scrollView.addSubview(caterpillar)
+        view.addSubview(caterpillar)
         caterpillar.frame = CGRect(x: (self.view.frame.width / 2) + 112, y: 400, width: 160, height: 200)
         //setting if image is hiddem
         if pointsObj.number < 100 {
@@ -193,7 +185,7 @@ class ViewController: UIViewController {
     
 
 //snail image
-        scrollView.addSubview(snail)
+        view.addSubview(snail)
         snail.transform = caterpillar.transform.rotated(by: .pi * 1.95)
         snail.frame = CGRect(x: (self.view.frame.width / 2) + 109 , y: 150, width: 160, height: 145)
         //setting if image hidden
@@ -202,30 +194,30 @@ class ViewController: UIViewController {
         }
 
 //slug image
-        scrollView.addSubview(slug)
+        view.addSubview(slug)
         slug.transform = slug.transform.rotated(by: .pi + 1.5)
         slug.frame = CGRect(x: (self.view.frame.width / 2) - 165, y: 150, width: 160, height: 160)
         slug.isHidden = true
 
 //ant image
-        scrollView.addSubview(ant)
+        view.addSubview(ant)
         ant.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
         ant.isHidden = true
 
 //ladybug image
-        scrollView.addSubview(ladybug)
+        view.addSubview(ladybug)
         ladybug.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
         ladybug.isHidden = true
 
 //beetle image
-        scrollView.addSubview(beetle)
+        view.addSubview(beetle)
         beetle.frame = CGRect(x: (self.view.frame.width / 2) + 85, y: 550, width: 160, height: 200)
         beetle.isHidden = true
    
 //"Greener" Label
         greenerLabel.frame = CGRect(x: (self.view.frame.width / 2) - 150, y: 60, width: 300, height: 87.5)
         greenerLabel.text = "Greener"
-        scrollView.addSubview(greenerLabel)
+        view.addSubview(greenerLabel)
         //text alignment
         greenerLabel.textAlignment = .center
         //text colour
@@ -242,7 +234,7 @@ class ViewController: UIViewController {
 // circular title label with number of points at top of page
         titleLabel.frame = CGRect(x: (self.view.frame.width / 2) - 100, y: 162.5, width: 200, height: 200)
         titleLabel.text = "\(pointsObj.number)\n Points"
-        scrollView.addSubview(titleLabel)
+        view.addSubview(titleLabel)
         // number of lines
         titleLabel.numberOfLines = 2
         //background color
@@ -260,7 +252,7 @@ class ViewController: UIViewController {
 // "Suggested Tasks" Label
         suggLabel.frame = CGRect(x: (self.view.frame.width / 2) - 200, y: 342, width: 200, height: 75)
         suggLabel.text = "Suggested Tasks:"
-        scrollView.addSubview(suggLabel)
+        view.addSubview(suggLabel)
         //text alignment
         suggLabel.textAlignment = .center
         //text colour
@@ -273,7 +265,7 @@ class ViewController: UIViewController {
 //first score left button
         score1Button3.frame = CGRect(x: (self.view.frame.width / 2) - 117.5, y: 400, width: 200, height: 75)
         score1Button3.setTitle("Recycle 5 Items", for: .normal)
-        scrollView.addSubview(score1Button3)
+        view.addSubview(score1Button3)
         //background color
         score1Button3.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
         //text colour
@@ -289,7 +281,7 @@ class ViewController: UIViewController {
         score1Button3.tag = 11
         
 //first score right button with square corners
-        scrollView.addSubview(score1Button2)
+        view.addSubview(score1Button2)
         //framing
         score1Button2.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 400, width: 25, height: 75)
         //background color
@@ -298,7 +290,7 @@ class ViewController: UIViewController {
         score1Button2.tag = 1
 
 //first score right button with rounded corners
-        scrollView.addSubview(score1Button1)
+        view.addSubview(score1Button1)
         //framing
         score1Button1.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 400, width: 50, height: 75)
         //background color
@@ -316,7 +308,7 @@ class ViewController: UIViewController {
 //second score left button
         score2Button3.frame = CGRect(x: (self.view.frame.width / 2) - 117.5, y: 500, width: 200, height: 75)
         score2Button3.setTitle("Bring Your Own\n  Grocery Bags", for: .normal)
-        scrollView.addSubview(score2Button3)
+        view.addSubview(score2Button3)
         //background color
         score2Button3.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
         //text colour
@@ -335,7 +327,7 @@ class ViewController: UIViewController {
 
                 
 //second score right button with square corners
-        scrollView.addSubview(score2Button2)
+        view.addSubview(score2Button2)
         //framing
         score2Button2.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 500, width: 25, height: 75)
         //background color
@@ -344,7 +336,7 @@ class ViewController: UIViewController {
         score2Button2.tag = 2
 
 //second score right button with rounded corners
-        scrollView.addSubview(score2Button1)
+        view.addSubview(score2Button1)
         //framing
         score2Button1.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 500, width: 50, height: 75)
         //background color
@@ -362,7 +354,7 @@ class ViewController: UIViewController {
 //third score left button
         score3Button3.frame = CGRect(x: (self.view.frame.width / 2) - 117.5, y: 600, width: 200, height: 75)
         score3Button3.setTitle("Grow an Indoor\n         Plant", for: .normal)
-        scrollView.addSubview(score3Button3)
+        view.addSubview(score3Button3)
         //background color
         score3Button3.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
         //text colour
@@ -382,7 +374,7 @@ class ViewController: UIViewController {
 
                 
 //third score right button with square corners
-        scrollView.addSubview(score3Button2)
+        view.addSubview(score3Button2)
         //framing
         score3Button2.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 600, width: 25, height: 75)
         //background color
@@ -391,7 +383,7 @@ class ViewController: UIViewController {
         score3Button2.tag = 3
 
 //third score right button with rounded corners
-        scrollView.addSubview(score3Button1)
+        view.addSubview(score3Button1)
         //framing
         score3Button1.frame = CGRect(x: (self.view.frame.width / 2) + 67.5, y: 600, width: 50, height: 75)
         //background color
@@ -409,7 +401,7 @@ class ViewController: UIViewController {
 //"Other Ways to Get Points" label
         moreOptionsLabel.frame = CGRect(x: (self.view.frame.width / 2) - 217.5, y: 667, width: 300, height: 75)
         moreOptionsLabel.text = "Other Ways to Get Points:"
-        scrollView.addSubview(moreOptionsLabel)
+        view.addSubview(moreOptionsLabel)
         //text alignment
         moreOptionsLabel.textAlignment = .center
         //text colour
@@ -421,7 +413,7 @@ class ViewController: UIViewController {
 //"More Tasks" Button
         moreOptionsButton.frame = CGRect(x: (self.view.frame.width / 2) - 120, y: 720, width: 240, height: 75)
         moreOptionsButton.setTitle("More Tasks", for: .normal)
-        scrollView.addSubview(moreOptionsButton)
+        view.addSubview(moreOptionsButton)
         //background color
         moreOptionsButton.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
         //text colour
@@ -439,7 +431,7 @@ class ViewController: UIViewController {
 //"Instrutions" button
         instrucButton.frame = CGRect(x: (self.view.frame.width / 2) - 62.5, y: 820, width: 125, height: 40)
         instrucButton.setTitle("Instructions", for: .normal)
-        scrollView.addSubview(instrucButton)
+        view.addSubview(instrucButton)
         //background color
         instrucButton.backgroundColor = UIColorFromHex(rgbValue: 0x10440C, alpha: 1)
         //text colour
@@ -533,7 +525,15 @@ class ViewController: UIViewController {
         if sender.tag == 5 {
             performSegue(withIdentifier: "moreTasksSegue", sender: self)
         }
+
     }
+    
+  //  override func viewDidLayoutSubviews() {
+   //     super.viewDidLayoutSubviews()
+   
+   //     let scrollView = UIScrollView(frame: view.bounds)
+   //     view.addSubview(scrollView)
+ //   }
 
     
 }

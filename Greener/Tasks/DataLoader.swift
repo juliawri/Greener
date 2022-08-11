@@ -35,6 +35,6 @@ public class DataLoader {
     }
     
     func sort() {
-        self.tasksData = self.tasksData.sorted(by: { $0.task < $1.task})
+        self.tasksData = self.tasksData.sorted(by: { $0.name < $1.name})
     }
 }
