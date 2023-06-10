@@ -11,6 +11,8 @@ class TaskCollectionViewCell: UICollectionViewCell {
     
     static let identfier = "TaskCollectionViewCell"
     
+    let tasks = DataLoader().tasksData
+    
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit

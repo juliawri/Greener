@@ -10,15 +10,57 @@ import SwiftUI
 import CoreData
 class ViewController: UIViewController {
     
-    //declaring UIScrollView and UIView
+    //setting storyboard identifier for this view controller
+    
+    
+    
+    //declaring scrollView
     let scrollView = UIScrollView()
+    //declaring contentView
     let contentView = UIView()
+    
+    //setting up functions to load scrollView and contentView
+    override func loadView() {
+        setView()
+        addScrollView()
+        addContentView()
+        
+    }
+    
+    //setting up view
+    func setView() {
+        view = UIView()
+        view.frame = UIScreen.main.bounds
+        view.backgroundColor = .white
+    }
+
+    
+
+    
+//adding scrollView as a child view
+    func addScrollView() {
+        view.addSubview(scrollView)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(scrollView)
+        scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
+//setting up contentView as a child view
+    func addContentView() {
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.addSubview(contentView)
+       // addChild(contentView)
+       // contentView.didMove(toParent: self)
+    }
+    
     
     var defaults = UserDefaults.standard
     
     var pointsObj = Points()
     
-
     // declaring "Greener" label
     var greenerLabel = UILabel()
 
@@ -215,9 +257,15 @@ class ViewController: UIViewController {
         beetle.isHidden = true
    
 //"Greener" Label
-        greenerLabel.frame = CGRect(x: (self.view.frame.width / 2) - 150, y: 60, width: 300, height: 87.5)
-        greenerLabel.text = "Greener"
+       // greenerLabel.frame = CGRect(x: (self.view.frame.width / 2) - 150, y: 60, width: 300, height: 87.5)
         view.addSubview(greenerLabel)
+        //constraints
+        greenerLabel.translatesAutoresizingMaskIntoConstraints = false
+        greenerLabel.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        greenerLabel.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        greenerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        greenerLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        greenerLabel.text = "Greener"
         //text alignment
         greenerLabel.textAlignment = .center
         //text colour
@@ -523,7 +571,7 @@ class ViewController: UIViewController {
         }
         
         if sender.tag == 5 {
-            performSegue(withIdentifier: "moreTasksSegue", sender: self)
+            performSegue(withIdentifier: "searchSegue", sender: self)
         }
 
     }
