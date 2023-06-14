@@ -176,6 +176,21 @@ class ViewController: UIViewController {
         return UIColor(red:red, green:green, blue:blue, alpha:CGFloat(alpha))
     }
     
+    //declare viewController
+    let searchChildVC = SearchChildVC()
+    
+    //func to add child view controllers
+    func addSearchChildVC() {
+        addChild(searchChildVC)
+        view.addSubview(searchChildVC.view)
+        searchChildVC.didMove(toParent: self))
+        setSearchChildVCConstraints()
+    }
+    
+    //constraints
+    func setSearchChildVCConstraints() {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -183,6 +198,8 @@ class ViewController: UIViewController {
         pointsObj.number = defaults.integer(forKey: "age")
         // makes "Search" title on SearchViewController large
         navigationController?.navigationBar.prefersLargeTitles = true
+        //add in child view controller
+        addSearchChildVC()
         
 //purple flower image
         view.addSubview(purpleFlower)
@@ -257,14 +274,13 @@ class ViewController: UIViewController {
         beetle.isHidden = true
    
 //"Greener" Label
-       // greenerLabel.frame = CGRect(x: (self.view.frame.width / 2) - 150, y: 60, width: 300, height: 87.5)
         view.addSubview(greenerLabel)
         //constraints
         greenerLabel.translatesAutoresizingMaskIntoConstraints = false
-        greenerLabel.widthAnchor.constraint(equalToConstant: 150).isActive = true
-        greenerLabel.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        greenerLabel.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        greenerLabel.heightAnchor.constraint(equalToConstant: 87.5).isActive = true
         greenerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        greenerLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        greenerLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 60).isActive = true
         greenerLabel.text = "Greener"
         //text alignment
         greenerLabel.textAlignment = .center
