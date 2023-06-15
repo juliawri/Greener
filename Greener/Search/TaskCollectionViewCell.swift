@@ -10,9 +10,25 @@ import UIKit
 class TaskCollectionViewCell: UICollectionViewCell {
     
     static let identfier = "TaskCollectionViewCell"
+
+
+    //declaring id variable
     
+    //loading tasks from json file
     let tasks = DataLoader().tasksData
     
+    //declaring id button
+    var id = 0
+    
+    //declaring an instance of the button
+    var button: UIButton = {
+        //setting properties of button
+        var button = UIButton()
+        button.isUserInteractionEnabled = true
+        button.isEnabled = true
+        button.addTarget(self, action: Selector(("pressed:")), for: .primaryActionTriggered)
+        return button
+    }()
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -48,7 +64,19 @@ class TaskCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(imageView)
         contentView.layer.cornerRadius = 8
         contentView.layer.masksToBounds = true
+    
+   // }
+    //adding function for when button is pressed
+    //func pressed(sender: UIButton!) {
     }
+    
+    //function for when button is tapped
+    //@objc func buttonAction(sender: UIButton!) {
+       // var id = task
+      //  if task.id == "1" {
+       //     self.performSegue(withIdentifier: "instrucSegue", sender: self)
+        //}
+ //   }
     
     required init?(coder: NSCoder){
         fatalError()

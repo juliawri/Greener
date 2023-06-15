@@ -10,13 +10,17 @@ import UIKit
 class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
-    
-   let tasks = DataLoader().tasksData
+    //loading tasks from json file
+    let tasks = DataLoader().tasksData
+    //creating arrays
     var taskNames = ["fillerString"]
     var filteredTaskNames = ["fillerString"]
+    //creating id variable
     
+    //creating instance of SearchController
     let searchController: UISearchController = {
         let vc = UISearchController()
+        //styling the search bar
         vc.searchBar.placeholder = "Search More Tasks"
         vc.searchBar.searchBarStyle = .minimal
         vc.definesPresentationContext = true
@@ -53,6 +57,11 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         return NSCollectionLayoutSection(group: group)
     }))
     
+    //making sure cell can't focus
+    private func collectionView(collectionView: UICollectionView, canFocusItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+            return false
+        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -71,6 +80,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         //adding data source
         collectionView.dataSource = self
         
+        //creating arrays
         taskNames = []
         filteredTaskNames = []
         
@@ -96,7 +106,8 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
              
                 if taskName.lowercased().contains(searchController.searchBar.text!.lowercased()) {
                      
-                     filteredTaskNames.append(taskName)
+                    filteredTaskNames.append(taskName)
+                    
                  }
              }
          }
@@ -123,12 +134,24 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         }
         if filteredTaskNames.count == 0 {
             cell.configure(with: taskNames[indexPath.row])
+            cell.id = indexPath.row
             return cell
         } else {
             cell.configure(with: filteredTaskNames[indexPath.row])
+            cell.id = indexPath.row
             return cell
         }
+        
+        
     }
+    
+    //function for when button is tapped
+    @objc func buttonAction(sender: UIButton!) {
+        //var id = tasks.id
+        if sender.id == "1" {
+            performSegue(withIdentifier: "instrucSegue", sender: self)
+        }
+  //  }
 
     /*
     // MARK: - Navigation

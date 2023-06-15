@@ -176,21 +176,6 @@ class ViewController: UIViewController {
         return UIColor(red:red, green:green, blue:blue, alpha:CGFloat(alpha))
     }
     
-    //declare viewController
-    let searchChildVC = SearchChildVC()
-    
-    //func to add child view controllers
-    func addSearchChildVC() {
-        addChild(searchChildVC)
-        view.addSubview(searchChildVC.view)
-        searchChildVC.didMove(toParent: self))
-        setSearchChildVCConstraints()
-    }
-    
-    //constraints
-    func setSearchChildVCConstraints() {
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -198,8 +183,6 @@ class ViewController: UIViewController {
         pointsObj.number = defaults.integer(forKey: "age")
         // makes "Search" title on SearchViewController large
         navigationController?.navigationBar.prefersLargeTitles = true
-        //add in child view controller
-        addSearchChildVC()
         
 //purple flower image
         view.addSubview(purpleFlower)
@@ -513,7 +496,7 @@ class ViewController: UIViewController {
         
         scrollView.contentSize = CGSize(width: view.frame.size.width, height: 2200)
     }
-//function for when first button is tapped
+//function for when button is tapped
     @objc func buttonAction(sender: UIButton!) {
         if sender.tag == 1 {
             score1Button1.backgroundColor = UIColorFromHex(rgbValue: 0xAFD1A2)
