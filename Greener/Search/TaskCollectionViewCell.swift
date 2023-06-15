@@ -18,7 +18,7 @@ class TaskCollectionViewCell: UICollectionViewCell {
     let tasks = DataLoader().tasksData
     
     //declaring id button
-    var id = 0
+    //var id = 0
     
     //declaring an instance of the button
     var button: UIButton = {
@@ -26,7 +26,10 @@ class TaskCollectionViewCell: UICollectionViewCell {
         var button = UIButton()
         button.isUserInteractionEnabled = true
         button.isEnabled = true
-        button.addTarget(self, action: Selector(("pressed:")), for: .primaryActionTriggered)
+        button.addTarget(TaskCollectionViewCell(), action: Selector(("pressed:")), for: .primaryActionTriggered)
+        func pressed(sender: UIButton!) {
+            performSegue(withIdentifier: "tag1Segue", sender: self)
+            }
         return button
     }()
     private let imageView: UIImageView = {
@@ -62,6 +65,7 @@ class TaskCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         contentView.addSubview(label)
         contentView.addSubview(imageView)
+        contentView.addSubview(button)
         contentView.layer.cornerRadius = 8
         contentView.layer.masksToBounds = true
     
@@ -98,4 +102,6 @@ class TaskCollectionViewCell: UICollectionViewCell {
         label.text = title
         contentView.backgroundColor = colors.randomElement()
     }
+    
+    
 }

@@ -15,8 +15,8 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
     //creating arrays
     var taskNames = ["fillerString"]
     var filteredTaskNames = ["fillerString"]
-    //creating id variable
-    
+    var ids = ["fillerString"]
+
     //creating instance of SearchController
     let searchController: UISearchController = {
         let vc = UISearchController()
@@ -83,10 +83,12 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         //creating arrays
         taskNames = []
         filteredTaskNames = []
+        ids = []
         
         //filling taskNames array with data
         for task in tasks {
             taskNames.append(task.name)
+            ids.append(task.id)
         }
     }
     
@@ -132,13 +134,14 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
                 as? TaskCollectionViewCell else {
             return UICollectionViewCell()
         }
+        cell.button.tag = Int(ids[indexPath.row])!
+    
+        
         if filteredTaskNames.count == 0 {
             cell.configure(with: taskNames[indexPath.row])
-            cell.id = indexPath.row
             return cell
         } else {
             cell.configure(with: filteredTaskNames[indexPath.row])
-            cell.id = indexPath.row
             return cell
         }
         
@@ -148,11 +151,21 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
     //function for when button is tapped
     @objc func buttonAction(sender: UIButton!) {
         //var id = tasks.id
-        if sender.id == "1" {
-            performSegue(withIdentifier: "instrucSegue", sender: self)
         }
-  //  }
 
+      func buttonTapped(sender : UIButton){
+            print(sender.tag)
+        
+      }
+    
+    func yourFunc(sender : UIButton){
+        print(sender.tag)
+        
+        if sender.tag == 0 {
+           // cell.performSegue(withIdentifier: "tag1Segue", sender: self)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

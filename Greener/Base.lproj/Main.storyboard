@@ -187,7 +187,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="always" id="UYV-WJ-TOC"/>
                     <connections>
-                        <segue destination="kEl-3h-XGW" kind="show" identifier="askEmailReceipt" id="svd-Yj-Y2Q"/>
+                        <segue destination="kEl-3h-XGW" kind="show" identifier="tag1Segue" id="svd-Yj-Y2Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zf7-Fj-y5X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

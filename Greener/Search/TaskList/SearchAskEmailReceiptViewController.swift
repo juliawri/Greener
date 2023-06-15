@@ -13,12 +13,12 @@ class SearchAskEmailReceiptViewController: UIViewController {
     let searchChildVC = SearchViewController()
     
     //func to add child view controllers
-    func addSearchChildVC() {
-        addChild(searchChildVC)
-        view.addSubview(searchChildVC.view)
-        searchChildVC.didMove(toParent: self)
-        setSearchChildVCConstraints()
-    }
+   // func addSearchChildVC() {
+   //     addChild(searchChildVC)
+   //     view.addSubview(searchChildVC.view)
+   //     searchChildVC.didMove(toParent: self)
+   //     setSearchChildVCConstraints()
+  //  }
     
     //constraints
     func setSearchChildVCConstraints() {
@@ -29,7 +29,7 @@ class SearchAskEmailReceiptViewController: UIViewController {
         super.viewDidLoad()
 
         //add in child view controller
-        addSearchChildVC()
+      //  addSearchChildVC()
     }
     
 
