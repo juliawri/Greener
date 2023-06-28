@@ -27,11 +27,9 @@ class TaskCollectionViewCell: UICollectionViewCell {
         button.isUserInteractionEnabled = true
         button.isEnabled = true
         button.addTarget(TaskCollectionViewCell(), action: Selector(("pressed:")), for: .primaryActionTriggered)
-        func pressed(sender: UIButton!) {
-            performSegue(withIdentifier: "tag1Segue", sender: self)
-            }
         return button
     }()
+    
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
