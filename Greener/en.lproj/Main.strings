@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "As you choose to live an eco-friendly lifestyle make sure to update your progress through our app. The more tasks accomplished will lead to a higher score, more life on your homepage, and a better environment. Click through our app to become more motivated to be sustainable!"; ObjectID = "6P7-ud-RLP"; */
+"6P7-ud-RLP.text" = "As you choose to live an eco-friendly lifestyle make sure to update your progress through our app. The more tasks accomplished will lead to a higher score, more life on your homepage, and a better environment. Click through our app to become more motivated to be sustainable!";
+
+/* Class = "UIViewController"; title = "ViewController"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "ViewController";
+
+/* Class = "UIViewController"; title = "TaskModelViewController"; ObjectID = "SGp-uz-jsv"; */
+"SGp-uz-jsv.title" = "TaskModelViewController";
+
+/* Class = "UINavigationItem"; title = "Search"; ObjectID = "UYV-WJ-TOC"; */
+"UYV-WJ-TOC.title" = "Search";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "drZ-ak-SIX"; */
+"drZ-ak-SIX.text" = "Label";
+
+/* Class = "UILabel"; text = "Our goal is to break down our environmental crisis into tangible actions individuals can take to make a difference."; ObjectID = "rT6-6b-2b5"; */
+"rT6-6b-2b5.text" = "Our goal is to break down our environmental crisis into tangible actions individuals can take to make a difference.";

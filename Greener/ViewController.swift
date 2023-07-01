@@ -575,12 +575,12 @@ class ViewController: UIViewController {
 
     }
     
-  //  override func viewDidLayoutSubviews() {
-   //     super.viewDidLayoutSubviews()
+   override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
    
-   //     let scrollView = UIScrollView(frame: view.bounds)
-   //     view.addSubview(scrollView)
- //   }
+         let scrollView = UIScrollView(frame: view.bounds)
+         view.addSubview(scrollView)
+    }
 
     
 }

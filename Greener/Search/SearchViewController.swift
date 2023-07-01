@@ -134,8 +134,6 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
                 as? TaskCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.button.tag = Int(ids[indexPath.row])!
-    
         
         if filteredTaskNames.count == 0 {
             cell.configure(with: taskNames[indexPath.row])
@@ -144,27 +142,22 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
             cell.configure(with: filteredTaskNames[indexPath.row])
             return cell
         }
-        
-        
     }
-    
-    //function for when button is tapped
-    @objc func buttonAction(sender: UIButton!) {
-        //var id = tasks.id
-        }
-
-      func buttonTapped(sender : UIButton){
-            print(sender.tag)
         
-      }
-    
-    func yourFunc(sender : UIButton){
-        print(sender.tag)
-        
-        if sender.tag == 0 {
-           // cell.performSegue(withIdentifier: "tag1Segue", sender: self)
+        private func collectionView(_ collectionView: UICollectionView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+            //task = tasks[indexPath.row]
+            collectionView.selectItem(at: nil, animated: true, scrollPosition: [])
+            let row=indexPath.row
+            performSegue(withIdentifier: "showContent", sender: row)
         }
-    }
+            
+    
+        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            if segue.identifier == "showContent" {
+                let destination = segue.destination as! TaskModelViewController
+                destination.contentString = "hello"
+            }
+        }
     
     /*
     // MARK: - Navigation

@@ -5,16 +5,12 @@
 //  Created by Julia Wright on 2023-06-28.
 //
 
-import UIKit
+/*import UIKit
 
 class SearchItemViewController: UIViewController {
     let task: TasksData
-    let tasks = DataLoader().tasksData.name
-    tasksArr = []
-    //filling array with data
-    for tas in tasks {
-        tasksArr.append(tas.name)
-    }
+    let tasks = DataLoader().tasksData
+    var tasksArr = ["filler string"]
 
     
     // MARK: - Init
@@ -49,6 +45,12 @@ class SearchItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        //filling array with data
+        tasksArr = []
+        for tas in tasks {
+            tasksArr.append(tas.name)
+        }
         title = task.name
         view.addSubview(collectionView)
         collectionView.delegate = self
@@ -93,8 +95,9 @@ extension SearchItemViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         let task = task[indexPath.row]
-        let vc = SearchItemViewController(task: task)
+        let vc = TaskModelViewController(task: task)
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
     }
 }
+*/

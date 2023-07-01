@@ -8,10 +8,12 @@
 import UIKit
 
 class TaskModelViewController: UIViewController {
-
+    var tableContent = UILabel()
+    var contentString = "Hello"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableContent.text = contentString
         // Do any additional setup after loading the view.
     }
     

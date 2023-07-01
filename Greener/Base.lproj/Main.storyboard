@@ -159,22 +159,6 @@
             </objects>
             <point key="canvasLocation" x="2204" y="-612"/>
         </scene>
-        <!--Search Ask Email Receipt View Controller-->
-        <scene sceneID="EvN-kM-nfV">
-            <objects>
-                <viewController id="kEl-3h-XGW" customClass="SearchAskEmailReceiptViewController" customModule="Greener" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="56b-6n-OSW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="98K-3c-pSa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="MiL-RV-2SI"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccl-jP-LDl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3293" y="-1083"/>
-        </scene>
         <!--Search-->
         <scene sceneID="vVP-wV-3uR">
             <objects>
@@ -187,12 +171,28 @@
                     </view>
                     <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="always" id="UYV-WJ-TOC"/>
                     <connections>
-                        <segue destination="kEl-3h-XGW" kind="show" identifier="tag1Segue" id="svd-Yj-Y2Q"/>
+                        <segue destination="SGp-uz-jsv" kind="show" identifier="showContent" id="ZyR-MQ-EKB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zf7-Fj-y5X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2864" y="-670"/>
+        </scene>
+        <!--TaskModelViewController-->
+        <scene sceneID="nqN-mB-odO">
+            <objects>
+                <viewController title="TaskModelViewController" id="SGp-uz-jsv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XAC-6C-rfm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kau-fE-wmi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PdR-9X-JzK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0j-SN-Z4Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3499" y="-1101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bYi-Qh-42G">
