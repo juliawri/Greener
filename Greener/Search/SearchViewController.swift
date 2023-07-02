@@ -15,7 +15,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
     //creating arrays
     var taskNames = ["fillerString"]
     var filteredTaskNames = ["fillerString"]
-    var ids = ["fillerString"]
+    
 
     //creating instance of SearchController
     let searchController: UISearchController = {
@@ -83,12 +83,11 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         //creating arrays
         taskNames = []
         filteredTaskNames = []
-        ids = []
         
         //filling taskNames array with data
         for task in tasks {
-            taskNames.append(task.name)
-            ids.append(task.id)
+            taskNames.append((task.name)!)
+
         }
     }
     

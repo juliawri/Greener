@@ -8,11 +8,9 @@
 import UIKit
 import SwiftUI
 import CoreData
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     //setting storyboard identifier for this view controller
-    
-    
     
     //declaring scrollView
     let scrollView = UIScrollView()
@@ -22,8 +20,8 @@ class ViewController: UIViewController {
     //setting up functions to load scrollView and contentView
     override func loadView() {
         setView()
-        addScrollView()
-        addContentView()
+     //   addScrollView()
+    //    addContentView()
         
     }
     
@@ -38,21 +36,23 @@ class ViewController: UIViewController {
 
     
 //adding scrollView as a child view
-    func addScrollView() {
-        view.addSubview(scrollView)
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(scrollView)
-        scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    }
+    //func addScrollView() {
+      //  view.addSubview(scrollView)
+      //  scrollView.frame = view.bounds
+        //scrollView.translatesAutoresizingMaskIntoConstraints = false
+        //view.addSubview(scrollView)
+        //scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        //scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        //scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        //scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+ //   }
     
 //setting up contentView as a child view
     func addContentView() {
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.addSubview(contentView)
-       // addChild(contentView)
+       // contentView.translatesAutoresizingMaskIntoConstraints = false
+     //   scrollView.addSubview(contentView)
+      //  contentView.isUserInteractionEnabled = true
+        //addChild(contentView)
        // contentView.didMove(toParent: self)
     }
     
@@ -179,6 +179,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadView()
         //saving number of points
         pointsObj.number = defaults.integer(forKey: "age")
         // makes "Search" title on SearchViewController large
@@ -258,12 +260,13 @@ class ViewController: UIViewController {
    
 //"Greener" Label
         view.addSubview(greenerLabel)
+        greenerLabel.frame = CGRect(x: (self.view.frame.width / 2) - 143, y: 60, width: 300, height: 87.5)
         //constraints
-        greenerLabel.translatesAutoresizingMaskIntoConstraints = false
-        greenerLabel.widthAnchor.constraint(equalToConstant: 300).isActive = true
-        greenerLabel.heightAnchor.constraint(equalToConstant: 87.5).isActive = true
-        greenerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        greenerLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 60).isActive = true
+        //greenerLabel.translatesAutoresizingMaskIntoConstraints = false
+        //greenerLabel.widthAnchor.constraint(equalToConstant: 300).isActive = true
+        //greenerLabel.heightAnchor.constraint(equalToConstant: 87.5).isActive = true
+        //greenerLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        //greenerLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 60).isActive = true
         greenerLabel.text = "Greener"
         //text alignment
         greenerLabel.textAlignment = .center
@@ -575,12 +578,13 @@ class ViewController: UIViewController {
 
     }
     
-   override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-   
-         let scrollView = UIScrollView(frame: view.bounds)
-         view.addSubview(scrollView)
-    }
+ //  override func viewDidLayoutSubviews() {
+   //    super.viewDidLayoutSubviews()
+   //
+    //   let scrollView = UIScrollView(frame: view.bounds)
+   //    view.addSubview(scrollView)
+   //    scrollView.isUserInteractionEnabled = true
+  //  }
 
     
 }

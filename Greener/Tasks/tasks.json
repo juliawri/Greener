@@ -2,115 +2,96 @@
     {
         "name" : "Ask to be emailed a receipt instead of taking a paper one",
         "description" : "By emailing a receipt, less paper is used, and reduces your environmental footprint. TIP: make an email account only for receipts for easy access to them.",
-        "level" : "medium",
-        "id" : "1"
+        "level" : "medium"
     },
     {
         "name" : "Delete 50 unwanted emails",
         "description" : "Deleting emails reduces electricity consumption. By doing this you reduce your consumption of electricity and water, which emits greenhouse gases",
-        "level" : "hard",
-        "id" : "1"
+        "level" : "hard"
     },
     {
         "name" : "Download OpenTabs as a chrome extension",
         "description" : "OpenTabs saves a tree in a rainforest for every 5 tabs opened. They have saved 8.5 million trees so far and are tackling climate change 5 tabs at a time.",
-        "level" : "hard",
-        "id" : "1"
+        "level" : "hard"
     },
     {
         "name" : "Choose a cruelty free product instead of one that tests on animals",
         "description" : "Cruelty-free products are better for the environment as they contain fewer synthetic chemicals. They have fewer toxic chemicals, meaning less of these chemicals may be released into the air, soil, and water.",
-        "level" : "medium",
-        "id" : "1"
+        "level" : "medium"
     },
     {
         "name" : "Layer up instead of turning on the heating",
         "description" : "Wearing more clothing traps body heat. By keeping the heating system off, less energy is consumed and produces less greenhouse gases. A bonus is this is also a cost-effective method as you are paying for less energy.",
-        "level" : "medium",
-        "id" : "1"
+        "level" : "medium"
     },
     {
         "name" : "Open your curtains instead of turning on lights",
         "description" : "Natural sunlight has been proven to release serotonin, a hormone that improves your mood. Your energy bill will be reduced due to less energy consumption from light bulbs.",
-        "level" : "easy",
-        "id" : "1"
+        "level" : "easy"
     },
     {
         "name" : "Print a page double sided to reduce waste ",
         "description" : "Printing double-side uses half the amount of paper and takes up less space than one-sided printing. This is a good way to save money as you’ll be going to the store less often to purchase more paper. ",
-        "level" : "easy",
-        "id" : "1"
+        "level" : "easy"
     },
     {
         "name" : "Pick up 3 pieces of litter",
         "description" : "Nine billion tons of litter end up in the ocean yearly. By picking up litter, you keep trash from entering bodies of water and you prevent wildlife from ingesting trash.",
-        "level" : "easy",
-        "id" : "1"
+        "level" : "easy"
     },
     {
         "name" : "Purchase bar soap instead of liquid soap",
         "description" : "Bar soap is more sustainable as it is usually packaged in thin cardboard rather than plastic bottles. The packaging takes a few months to decompose and takes 20 times less energy to package compared to a plastic bottle used for liquid soap.",
-        "level" : "medium",
-        "id" : "1"
+        "level" : "medium"
     },
     {
         "name" : "Turn off shower while lathering or applying soap",
         "description" : "Showers are the third largest water use in an average home (toilets and washing machines top the list). Turning off the faucet saves gallons and lowers your water bill.e air, soil, and water.",
-        "level" : "easy",
-        "id" : "1"
+        "level" : "easy"
     },
     {
         "name" : "Repair 1 old article of clothing",
         "description" : "Repairing clothing lengthens its lifetime. This reduces the amount of new clothing you will need and makes sure the clothing going to waste has been fully used.",
-        "level" : "hard",
-        "id" : "1"
+        "level" : "hard"
     },
     {
         "name" : "Repurpose 1 shirt into a rag",
         "description" : "To do this, find a pair of scissors and cut below the sleeves. Remove the top side of the t-shirt and voila: you have two rags. These could be used to clean, craft, and even garden.",
-        "level" : "easy",
-        "id" : "1"
+        "level" : "easy"
     },
     {
         "name" : "Repurpose a glass container",
         "description" : "Glass is a resource efficient material, and it is proven to be cleaner than plastic. It is important to repurpose a glass container as glass is difficult to dispose of properly.",
-        "level" : "easy",
-        "id" : "1"
+        "level" : "easy"
     },
     {
         "name" : "Responsibly dispose of your pet’s waste",
         "description" : "Waste is usually picked up with a plastic bag, which can take a long time to decomposed. Instead, use scrap paper or newspaper, which breaks down naturally and faster",
-        "level" : "hard",
-        "id" : "1"
+        "level" : "hard"
     },
     {
         "name" : "Reuse 5 pieces of scrap paper",
         "description" : "Collecting paper reduces greenhouse gases and repurposes paper that would have gone in the trash. You saved water, trees, and energy from being used to create more paper.",
-        "level" : "medium",
-        "id" : "1"
+        "level" : "medium"
     },
     {
         "name" : "Unsubscribe from 4 unwanted email subscriptions",
         "description" : "By unsubscribing, you reduce the amount of future email you will receive. This reduces your electricity consumption and is better for the environment..",
-        "level" : "hard",
-        "id" : "1"
+        "level" : "hard"
     },
     {
         "name" : "Use a metal straw instead of a plastic straw",
         "description" : "Between 437 million and 8.3 billion straws pollute global coastlines. When these straws break down after many years, they release harmful chemicals in the air, soil, and water.",
-        "level" : "easy",
-        "id" : "1"
+        "level" : "easy"
     },
     {
         "name" : "Use reusable water bottle for 1 drink instead of a disposable plastic water bottle",
         "description" : "By using a reusable water bottle, you could reduce your carbon footprint and reduce the amount of plastic that would have gone into landfills and oceans.",
-        "level" : "easy",
-        "id" : "1"
+        "level" : "easy"
     },
     {
         "name" : "Wipe off makeup with a reusable cloth instead of a disposable wipe",
         "description" : "Disposable wipes are made with plastic and other materials that are difficult to break down. Cloths can be washed and reused, saving money from buying wipes, and preventing plastic from going to waste..",
-        "level" : "hard",
-        "id" : "1"
+        "level" : "hard"
     }
 ]

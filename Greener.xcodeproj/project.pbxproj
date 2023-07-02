@@ -16,7 +16,7 @@
 		A4311926285B68770080DD7F /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4311925285B68760080DD7F /* firstViewController.swift */; };
 		AE5770732859048700E8AB23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5770722859048700E8AB23 /* AppDelegate.swift */; };
 		AE5770752859048700E8AB23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5770742859048700E8AB23 /* SceneDelegate.swift */; };
-		AE5770772859048700E8AB23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5770762859048700E8AB23 /* ViewController.swift */; };
+		AE5770772859048700E8AB23 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5770762859048700E8AB23 /* MainViewController.swift */; };
 		AE57707A2859048700E8AB23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5770782859048700E8AB23 /* Main.storyboard */; };
 		AE57707D2859048700E8AB23 /* Greener.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE57707B2859048700E8AB23 /* Greener.xcdatamodeld */; };
 		AE57707F2859048C00E8AB23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE57707E2859048C00E8AB23 /* Assets.xcassets */; };
@@ -44,7 +44,7 @@
 		AE57706F2859048700E8AB23 /* Greener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Greener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5770722859048700E8AB23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE5770742859048700E8AB23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE5770762859048700E8AB23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE5770762859048700E8AB23 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AE5770792859048700E8AB23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE57707C2859048700E8AB23 /* Greener.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Greener.xcdatamodel; sourceTree = "<group>"; };
 		AE57707E2859048C00E8AB23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 				AE87E3CA2884F4D600CFFCE5 /* Managers */,
 				AE5770742859048700E8AB23 /* SceneDelegate.swift */,
 				A4311925285B68760080DD7F /* firstViewController.swift */,
-				AE5770762859048700E8AB23 /* ViewController.swift */,
+				AE5770762859048700E8AB23 /* MainViewController.swift */,
 				AECF8F8E285BFBB2000C5C38 /* Points.swift */,
 				AECF8F90285C5AC2000C5C38 /* UIFont.swift */,
 				AE5770782859048700E8AB23 /* Main.storyboard */,
@@ -234,7 +234,7 @@
 			files = (
 				AE57707D2859048700E8AB23 /* Greener.xcdatamodeld in Sources */,
 				A4311926285B68770080DD7F /* firstViewController.swift in Sources */,
-				AE5770772859048700E8AB23 /* ViewController.swift in Sources */,
+				AE5770772859048700E8AB23 /* MainViewController.swift in Sources */,
 				AECF8F91285C5AC2000C5C38 /* UIFont.swift in Sources */,
 				AE87E3C62883A0C500CFFCE5 /* TaskCollectionViewCell.swift in Sources */,
 				21094B7B2A4C275B001EE2B8 /* SearchItemViewController.swift in Sources */,
