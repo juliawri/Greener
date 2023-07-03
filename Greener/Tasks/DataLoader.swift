@@ -18,8 +18,8 @@ public class DataLoader {
     
     func load() {
         
-        if let fileLocation = Bundle.main.url(forResource: "tasks", withExtension: "json") {
-            
+        if let fileLocation = Bundle.main.path(forResource: "tasks", ofType: "json") {
+
             //do catch for errors
             do {
                 let data = try Data(contentsOf: fileLocation)

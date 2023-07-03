@@ -16,7 +16,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
     var taskNames = ["fillerString"]
     var filteredTaskNames = ["fillerString"]
     
-
+    
     //creating instance of SearchController
     let searchController: UISearchController = {
         let vc = UISearchController()
@@ -31,36 +31,36 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         frame: .zero,
         collectionViewLayout: UICollectionViewCompositionalLayout(sectionProvider: {_, _ -> NSCollectionLayoutSection? in
             let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
-        
-        item.contentInsets = NSDirectionalEdgeInsets(
-            top: 2,
-            leading: 7,
-            bottom: 2,
-            trailing: 7
-        )
-        
-        let group = NSCollectionLayoutGroup.horizontal(
-            layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(150)),
-            subitem: item,
-            count: 1
-        )
-        
-        
-        group.contentInsets = NSDirectionalEdgeInsets(
-            //padding at top of group of two cells
-            top: 2,
-            leading: 0,
-            //padding at bottom of group of two cells
-            bottom: 2,
-            trailing: 0
-        )
-        return NSCollectionLayoutSection(group: group)
-    }))
+            
+            item.contentInsets = NSDirectionalEdgeInsets(
+                top: 2,
+                leading: 7,
+                bottom: 2,
+                trailing: 7
+            )
+            
+            let group = NSCollectionLayoutGroup.horizontal(
+                layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(150)),
+                subitem: item,
+                count: 1
+            )
+            
+            
+            group.contentInsets = NSDirectionalEdgeInsets(
+                //padding at top of group of two cells
+                top: 2,
+                leading: 0,
+                //padding at bottom of group of two cells
+                bottom: 2,
+                trailing: 0
+            )
+            return NSCollectionLayoutSection(group: group)
+        }))
     
     //making sure cell can't focus
     private func collectionView(collectionView: UICollectionView, canFocusItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-            return false
-        }
+        return false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +87,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         //filling taskNames array with data
         for task in tasks {
             taskNames.append((task.name)!)
-
+            
         }
     }
     
@@ -99,22 +99,22 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
     func updateSearchResults(for searchController: UISearchController) {
         filteredTaskNames = []
         if searchController.searchBar.text == "" {
-             filteredTaskNames = taskNames
-         }
-         
-         else {
+            filteredTaskNames = taskNames
+        }
+        
+        else {
             for taskName in taskNames {
-             
+                
                 if taskName.lowercased().contains(searchController.searchBar.text!.lowercased()) {
-                     
+                    
                     filteredTaskNames.append(taskName)
                     
-                 }
-             }
-         }
-            
-            self.collectionView.reloadData()
+                }
+            }
         }
+        
+        self.collectionView.reloadData()
+    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -129,6 +129,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TaskCollectionViewCell.identfier, for: indexPath)
                 as? TaskCollectionViewCell else {
             return UICollectionViewCell()
@@ -141,23 +142,26 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
             cell.configure(with: filteredTaskNames[indexPath.row])
             return cell
         }
-    }
         
-        private func collectionView(_ collectionView: UICollectionView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-            //task = tasks[indexPath.row]
-            collectionView.selectItem(at: nil, animated: true, scrollPosition: [])
-            let row=indexPath.row
-            performSegue(withIdentifier: "showContent", sender: row)
-        }
-            
+        
+        // cell.button.tag = indexPath.row
+        //  cell.button.addTarget(self,
+        //                       action: #selector(self.prepareForSegue(segue: NSObject sender: cell),
+        //      for: .touchUpInside)
+    }
     
-        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            if segue.identifier == "showContent" {
-                let destination = segue.destination as! TaskModelViewController
-                destination.contentString = "hello"
+    private func collectionView(_ collectionView: UICollectionView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //task = tasks[indexPath.row]
+        collectionView.selectItem(at: nil, animated: true, scrollPosition: [])
+        let row=indexPath.row
+        performSegue(withIdentifier: "showContent", sender: row)
+    }
+    
+    
+    @objc func buttonAction(sender: UICollectionViewCell!) {
+            performSegue(withIdentifier: "showContent", sender: self)
+            //destination.contentString = "hello"
             }
-        }
-    
     /*
     // MARK: - Navigation
 
