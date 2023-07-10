@@ -151,17 +151,17 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
     }
     
     private func collectionView(_ collectionView: UICollectionView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //task = tasks[indexPath.row]
+       // task = tasks[indexPath.row]
         collectionView.selectItem(at: nil, animated: true, scrollPosition: [])
-        let row=indexPath.row
-        performSegue(withIdentifier: "showContent", sender: row)
+       // let row=indexPath.row
+      //  performSegue(withIdentifier: "showContent", sender: row)
     }
     
     
-    @objc func buttonAction(sender: UICollectionViewCell!) {
-            performSegue(withIdentifier: "showContent", sender: self)
+   // @objc func buttonAction(sender: UICollectionViewCell!) {
+       //     performSegue(withIdentifier: "showContent", sender: self)
             //destination.contentString = "hello"
-            }
+        //    }
     /*
     // MARK: - Navigation
 

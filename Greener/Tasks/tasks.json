@@ -53,7 +53,8 @@
         "name" : "Repair 1 old article of clothing",
         "description" : "Repairing clothing lengthens its lifetime. This reduces the amount of new clothing you will need and makes sure the clothing going to waste has been fully used.",
         "level" : "hard"
-    },
+    }
+]
     {
         "name" : "Repurpose 1 shirt into a rag",
         "description" : "To do this, find a pair of scissors and cut below the sleeves. Remove the top side of the t-shirt and voila: you have two rags. These could be used to clean, craft, and even garden.",

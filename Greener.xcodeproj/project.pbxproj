@@ -12,7 +12,7 @@
 		215EE5B82A3AF50D005960E1 /* SearchAskEmailReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215EE5B72A3AF50D005960E1 /* SearchAskEmailReceiptViewController.swift */; };
 		217B7574289234CB001C5D55 /* TasksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217B7573289234CB001C5D55 /* TasksData.swift */; };
 		217B75762892359E001C5D55 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217B75752892359E001C5D55 /* DataLoader.swift */; };
-		217B75872892C86E001C5D55 /* tasks.json in Resources */ = {isa = PBXBuildFile; fileRef = 217B75862892C86E001C5D55 /* tasks.json */; };
+		21FBDB362A5C1B5A001E55DE /* tasks.json in Resources */ = {isa = PBXBuildFile; fileRef = 21FBDB352A5C1B5A001E55DE /* tasks.json */; };
 		A4311926285B68770080DD7F /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4311925285B68760080DD7F /* firstViewController.swift */; };
 		AE5770732859048700E8AB23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5770722859048700E8AB23 /* AppDelegate.swift */; };
 		AE5770752859048700E8AB23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5770742859048700E8AB23 /* SceneDelegate.swift */; };
@@ -38,8 +38,8 @@
 		215EE5B72A3AF50D005960E1 /* SearchAskEmailReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAskEmailReceiptViewController.swift; sourceTree = "<group>"; };
 		217B7573289234CB001C5D55 /* TasksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksData.swift; sourceTree = "<group>"; };
 		217B75752892359E001C5D55 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
-		217B75862892C86E001C5D55 /* tasks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tasks.json; sourceTree = "<group>"; };
 		21DB47242A5021250018A528 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		21FBDB352A5C1B5A001E55DE /* tasks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tasks.json; sourceTree = "<group>"; };
 		A4311925285B68760080DD7F /* firstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
 		AE57706F2859048700E8AB23 /* Greener.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Greener.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5770722859048700E8AB23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				217B7573289234CB001C5D55 /* TasksData.swift */,
-				217B75862892C86E001C5D55 /* tasks.json */,
+				21FBDB352A5C1B5A001E55DE /* tasks.json */,
 				217B75752892359E001C5D55 /* DataLoader.swift */,
 				21094B7C2A4C31C0001EE2B8 /* TaskModelViewController.swift */,
 			);
@@ -218,7 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				217B75872892C86E001C5D55 /* tasks.json in Resources */,
+				21FBDB362A5C1B5A001E55DE /* tasks.json in Resources */,
 				AE5770822859048C00E8AB23 /* LaunchScreen.storyboard in Resources */,
 				AE57707F2859048C00E8AB23 /* Assets.xcassets in Resources */,
 				AE57707A2859048700E8AB23 /* Main.storyboard in Resources */,

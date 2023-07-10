@@ -22,7 +22,7 @@ public class DataLoader {
 
             //do catch for errors
             do {
-                let data = try Data(contentsOf: fileLocation)
+                let data = try Data(contentsOf: URL(fileURLWithPath: fileLocation))
                 let jsonDecoder = JSONDecoder()
                 let dataFromJson = try jsonDecoder.decode([TasksData].self, from: data)
                 

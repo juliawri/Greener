@@ -11,6 +11,5 @@ struct TasksData: Codable {
     
     var name: String?
     var description: String?
-    var level: String
-    var id: String?
+    var level: String?
 }

@@ -20,11 +20,6 @@ class SearchAskEmailReceiptViewController: UIViewController {
    //     setSearchChildVCConstraints()
   //  }
     
-    //constraints
-    func setSearchChildVCConstraints() {
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
